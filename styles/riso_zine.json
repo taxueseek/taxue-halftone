@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "style_id": "riso_zine",
+  "name": "孔版 zine 路",
+  "position": "极疏空纸(70–90%) + 粗线点 + 落款小字",
+  "signature": "3:5 或极疏构图，主体小、空纸大，当代纸仍默认不做旧。",
+  "six_axes": {
+    "ground": "ground_pale_beige",
+    "ink_role": {
+      "mode": "complementary_duotone",
+      "primary": {"role": "主墨", "hex": "#008A4B", "percent": [70, 85], "duty": "主体与少量结构"},
+      "accent": {"role": "辅墨", "hex": "#63365F", "percent": [15, 30], "duty": "一处落款或一个物件"}
+    },
+    "boolean": "overprint",
+    "mechanism": "am_halftone",
+    "behavior": "still",
+    "volume": "image_lead"
+  },
+  "typography_bias": "落款式小字；正文 type-off；字退为安静签名",
+  "subject_bias": "主体 10–30%；极疏 zine 主体更小",
+  "empty_paper": [70, 90],
+  "platform_bias": ["xiaohongshu_34", "avatar_11"],
+  "avoid": ["做旧纸默认", "填满画面", "多色叠印"],
+  "example_prompt": "Substantial empty paper 70-90%, small subject, Botanical Green #008A4B + Aubergine #63365F, coarse line dots, pale beige paper, quiet signature type-off, contemporary not aged, one accent object."
+}

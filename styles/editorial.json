@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "style_id": "editorial",
+  "name": "当代编辑印刷风",
+  "position": "基准风格（本技能保留的核心视觉）",
+  "signature": "AM 半调 + 字撞物 + 纸露白，一物主导、字与物一次碰撞",
+  "six_axes": {
+    "ground": "ground_neutral_white",
+    "ink_role": {
+      "mode": "complementary_duotone",
+      "primary": {"role": "主墨", "hex": "#2148B8", "percent": [70, 85], "duty": "主体结构、标题、主要刻线"},
+      "accent": {"role": "辅墨", "hex": "#C65F38", "percent": [15, 30], "duty": "一个物件、一处叠印交叉或一处注释"}
+    },
+    "boolean": "overprint",
+    "mechanism": "am_halftone",
+    "behavior": "still",
+    "volume": "image_lead"
+  },
+  "typography_bias": "高对比衬线(编辑声部) + 压缩无衬线(工具声部)；一个 5–12× 字号跳",
+  "subject_bias": "一物主导占 45–80%，至少一边裁切；遮标题 3 秒认出",
+  "empty_paper": [25, 55],
+  "platform_bias": ["xiaohongshu_34", "bilibili_169", "wechat_235"],
+  "avoid": ["做旧", "泛黄", "米色怀旧默认", "钴蓝+陶土骑行夏日专用组合"],
+  "example_prompt": "Coarse AM halftone, one dominant object cropped at an edge, headline crossing the object, paper knockout highlights, Cobalt primary #2148B8 + Terracotta accent #C65F38, 45° main plate, overprint where they meet, open shadows."
+}

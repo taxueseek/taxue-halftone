@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "axis": "mechanisms",
+  "description": "轴4 印刷机制。一次只用一种主导机制，禁止 AM+grain+scratch+coffee 叠加。每条含何时用/何时输/硬规则/在 prompt 里的痕迹写法。",
+  "default": "am_halftone",
+  "mechanisms": [
+    {
+      "id": "am_halftone",
+      "name": "粗 AM 半调",
+      "physics": "点坐固定网格，间距不变、面积变",
+      "wins": ["摄影阶调", "墙面", "要看得见的印刷语言"],
+      "loses": ["微字会 banding", "雾渐变会 banding"],
+      "rules": {
+        "angle": {"single": "45°（最不显网格）", "duo": "两色差 ≥30°（椭圆点 60°）", "forbid": "禁止两版同角，除非用户点名 Pop 干涉"},
+        "dot_shape": [
+          {"shape": "round", "use": ["人像", "皮肤", "通用默认"], "warn": "暗部易 plugging，暗调 70–90% 网留气孔"},
+          {"shape": "elliptical", "use": ["平网", "渐变更顺"], "forbid": "不适合肤色，会出条纹"},
+          {"shape": "line", "use": ["Riso", "报纸编辑感"], "note": "9:16 压缩后比圆点稳"},
+          {"shape": "square", "use": ["粗网", "zine", "图形"], "note": "中调不关键时用"}
+        ],
+        "paper": "高光 0–8% 直接 knockout 到纸，不要浅灰假高光，不要噪声填满；可见纸 25–55%",
+        "dark": "主墨禁止大面积 100% 平铺（会糊会蹭），用 70–90% 网；人像压暗调保高光纸白"
+      },
+      "prompt_hint": "coarse AM dots, clear angle, paper knockouts in highlights, open shadows"
+    },
+    {
+      "id": "one_bit_atkinson",
+      "name": "1-bit Atkinson",
+      "physics": "误差扩散，故意丢约 25% 误差，高反差",
+      "wins": ["字主导", "图形", "社媒压缩", "Mac 印刷清晰度"],
+      "loses": ["细腻皮肤", "平滑雾"],
+      "rules": {
+        "screen": "screening=none；结构边保持硬",
+        "subject": "字即物或高反差图形时最有力"
+      },
+      "prompt_hint": "1-bit Atkinson threshold, hard edge, no screening in texture"
+    },
+    {
+      "id": "photogram_stencil",
+      "name": "光影剪影 / 孔版平阶",
+      "physics": "连续调压成 2–3 个实地色阶，无点",
+      "wins": ["构成简洁", "波兰海报路径", "远距墙面"],
+      "loses": ["需要皮肤/织物层次"],
+      "rules": {
+        "levels": "2–3 平版，桥接岛屿",
+        "type": "字实地",
+        "path": "构图简洁时走这一路"
+      },
+      "prompt_hint": "2-3 flat values, hard photogram silhouette, solid type"
+    },
+    {
+      "id": "letterpress_relief",
+      "name": "凸版 / 木活字",
+      "physics": "压力+专色；大实地会「咸」（露纸牙）",
+      "wins": ["字即物", "请柬/封面", "标题作为锁版"],
+      "loses": ["连续调摄影"],
+      "rules": {
+        "type": "字凸起；kiss=墨坐纸面，bite=1–2px 边缘增墨+字怀微填",
+        "forbid": "禁止投影冒充凸版；禁止假大实地",
+        "multi": "木活字与小金属字不要同一墨压"
+      },
+      "prompt_hint": "letterpress relief, kiss impression, no fake dropshadow"
+    },
+    {
+      "id": "film_stack",
+      "name": "胶片叠层",
+      "physics": "加网胶片叠在一起，粗网本身是图形",
+      "wins": ["字图一体", "展览", "要深度但不加第三墨"],
+      "loses": ["信息海报可读性（慎用）"],
+      "rules": {
+        "motion": "不规则宽边框住拼层；重叠网角必须是选择",
+        "limit": "tape/拼缝最多一处",
+        "note": "Weingart 语法，勿把人名 / 风格名写进 prompt"
+      },
+      "prompt_hint": "screened film layers stacked, crossing angles chosen, one tape seam"
+    }
+  ],
+  "guardrails": [
+    "一次只用一种主导机制",
+    "禁止 AM + grain + scratch + 咖啡渍叠在一起",
+    "机制不是 AM 时：第 5 段改写为该机制的痕迹（1-bit 颗粒/硬阈值；平阶硬边；凸版压痕），不要仍写 coarse AM",
+    "Riso 是印刷机，Halftone 是加网，不要把两个词当可互换滤镜名",
+    "切换机制时读 docs/DESIGN.md 的机制输赢判定，并跑 validate_mechanism 检查引用一致"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "description": "六轴 schema，供校验器交叉引用：每个轴的合法 id 集合与必填字段。",
+  "axes": {
+    "ground": {
+      "legitimate_from": "roles.json",
+      "id_field": "ground.id",
+      "required_fields": ["id", "name", "hex", "role", "counts_as_ink"],
+      "counts_as_ink_must_be": false
+    },
+    "mechanism": {
+      "legitimate_from": "mechanisms.json",
+      "id_field": "mechanisms[].id",
+      "required_fields": ["id", "name", "physics", "wins", "loses", "rules"],
+      "default": "am_halftone"
+    },
+    "behavior": {
+      "legitimate_from": "behaviors.json",
+      "id_field": "behaviors[].id",
+      "required_fields": ["id", "name", "direction"]
+    },
+    "volume": {
+      "legitimate_from": "volume.json",
+      "id_field": "profiles.*.name",
+      "profiles_keys": ["type_lead", "image_lead", "balanced"],
+      "required_fields": ["name", "rule"]
+    },
+    "boolean": {
+      "legitimate_from": "bools.json",
+      "id_field": "booleans[].id",
+      "required_fields": ["id", "name", "rule"],
+      "valid_values": ["knockout", "overprint", "trap"]
+    },
+    "layout": {
+      "legitimate_from": "references/compile.md",
+      "description": "版式家族由 references 定义，非独立数据层",
+      "valid_values": ["image_field", "specimen", "type_led", "ruled_info", "archival", "editorial_cover", "object_field", "overprint_collage", "film_stack", "journal"]
+    }
+  },
+  "style_required_axes": ["ground", "ink_role", "boolean", "mechanism", "behavior", "volume", "subject_chain_ok"]
+}

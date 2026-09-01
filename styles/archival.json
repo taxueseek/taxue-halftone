@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "style_id": "archival",
+  "name": "标本 / 档案路",
+  "position": "archival plate 版式，标本型",
+  "signature": "标题 + 一张规整图像板 + 多栏图注；植物/标本/观察笔记。",
+  "six_axes": {
+    "ground": "ground_pale_beige",
+    "ink_role": {
+      "mode": "chromatic_plus_black",
+      "primary": {"role": "主墨(植物绿系)", "hex": "#008A4B", "percent": [70, 85], "duty": "主体结构与标题"},
+      "accent": {"role": "黑墨", "hex": "#30343A", "percent": [15, 30], "duty": "图注、编号、多栏小字"}
+    },
+    "boolean": "overprint",
+    "mechanism": "am_halftone",
+    "behavior": "still",
+    "volume": "balanced"
+  },
+  "typography_bias": "克制衬线标题 + 规整图注多栏；正文 type-off",
+  "subject_bias": "标本型主体，规整图像板 + 编号图注",
+  "empty_paper": [30, 50],
+  "platform_bias": ["xiaohongshu_34", "wechat_235"],
+  "avoid": ["装饰性留白", "插图堆叠", "非档案质感"],
+  "example_prompt": "Archival plate, one rectangular screened image plate, disciplined multi-column caption block, Botanical Green #008A4B + Charcoal #30343A, pale beige paper, specimen subject, restrained serif title, contemporary not aged, open captions."
+}

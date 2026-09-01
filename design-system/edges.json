@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "axis": "edges",
+  "description": "边规则。结构边保持硬边，扩散边才走网；不要为了「统一风格」把结构边融化。",
+  "edge_types": [
+    {
+      "id": "structural",
+      "name": "结构边",
+      "keep": "硬边",
+      "examples": ["窗", "字", "几何", "器物轮廓", "关键面容", "功能连接"],
+      "rule": "结构边永远硬边，不随网点融化；用实线或留白保护",
+      "typical_implementation": "实线轮廓、纸白 knockouts、边缘高对比"
+    },
+    {
+      "id": "diffusion",
+      "name": "扩散边",
+      "keep": "走网",
+      "examples": ["雾", "烟", "高光 knockout", "空气", "背景过渡"],
+      "rule": "扩散边才走网（dissipate），让网点接管过渡",
+      "typical_implementation": "drift、fade、halo"
+    }
+  ],
+  "guardrails": [
+    "结构边（窗/字/几何/器物轮廓/面容/功能连接）永远保持硬边",
+    "扩散边（雾/烟/高光/空气）才走网",
+    "禁止为了「统一风格 / 看起来复古」把窗户、文字、结构融化掉",
+    "关键轮廓、眼睛、面部、花蕊、功能连接及文字必须用实线、留白或高对比边缘保护，不可被网点吃掉"
+  ]
+}

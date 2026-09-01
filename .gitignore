@@ -1,0 +1,14 @@
+# 本地个性化学习文件，不入库
+memory/
+user-preferences.md
+
+# 本地实测产物
+_backup_*
+test-prompts.md
+*.png.tmp
+
+.DS_Store
+
+# 本地归档
+.trash/
+__pycache__/

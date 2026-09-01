@@ -1,0 +1,104 @@
+{
+  "skill_name": "taxue-halftone",
+  "schema_version": 1,
+  "eval_prompt_contract": "Each eval: {id, prompt, style, assertions}. assertions assert the six-axes values + the tonal gate (can you name which ink / which angle-or-layer / where paper shows).",
+  "evals": [
+    {
+      "id": 1,
+      "style": "editorial",
+      "prompt": "用半调海报做一张关于凌晨便利店的竖版海报，文案是 still open。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "am_halftone",
+        "ground": "ground_neutral_white",
+        "mode": "complementary_duotone",
+        "ink_hexes": ["#2148B8", "#C65F38"],
+        "theme_roles": ["acc: main scene+headline", "accent: one object or overprint"],
+        "volume": "image_lead",
+        "behavior": "still",
+        "empty_paper_range": [25, 55],
+        "tonal_gate": "can name the ink, the angle, and where paper shows"
+      }
+    },
+    {
+      "id": 2,
+      "style": "polish",
+      "prompt": "把「孤独」做成一张单墨高反差剪影海报，无字。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "photogram_stencil",
+        "ground": "ground_cool_gray",
+        "mode": "pure_one_ink",
+        "ink_hexes": ["#30343A"],
+        "volume": "type_lead",
+        "behavior": "still",
+        "empty_paper_range": [35, 55],
+        "tonal_gate": "2-3 flat values, hard silhouette, no fine screen"
+      }
+    },
+    {
+      "id": 3,
+      "style": "swiss",
+      "prompt": "做一张 16:9 的摄影展海报，红色摄影主体 + 黑色正文。",
+      "assertions": {
+        "ratio": "16:9",
+        "mechanism": "am_halftone",
+        "ground": "ground_neutral_white",
+        "mode": "chromatic_plus_black",
+        "ink_hexes": ["#C83232", "#30343A"],
+        "volume": "image_lead",
+        "behavior": "horizon",
+        "empty_paper_range": [40, 60],
+        "tonal_gate": "photo screened, type solid, white paper, calm grid"
+      }
+    },
+    {
+      "id": 4,
+      "style": "riso_zine",
+      "prompt": "做一张 3:5 的独立刊物封面，极疏空纸，绿色主墨。",
+      "assertions": {
+        "ratio": "3:5",
+        "mechanism": "am_halftone",
+        "ground": "ground_pale_beige",
+        "mode": "complementary_duotone",
+        "ink_hexes": ["#008A4B", "#63365F"],
+        "volume": "image_lead",
+        "behavior": "still",
+        "empty_paper_range": [70, 90],
+        "tonal_gate": "substantial empty paper, small subject, quiet type-off"
+      }
+    },
+    {
+      "id": 5,
+      "style": "filmstack",
+      "prompt": "做一张字图一体的展览海报，深蓝+安全橙叠印。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "film_stack",
+        "ground": "ground_neutral_white",
+        "mode": "overprint_duotone",
+        "ink_hexes": ["#263E99", "#E55D2B"],
+        "volume": "balanced",
+        "behavior": "densify",
+        "empty_paper_range": [20, 40],
+        "tonal_gate": "type+photo share one stack, chosen crossing angles"
+      }
+    },
+    {
+      "id": 6,
+      "style": "archival",
+      "prompt": "做一张植物档案内页，绿墨主体 + 黑墨图注。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "am_halftone",
+        "ground": "ground_pale_beige",
+        "mode": "chromatic_plus_black",
+        "ink_hexes": ["#008A4B", "#30343A"],
+        "volume": "balanced",
+        "behavior": "still",
+        "empty_paper_range": [30, 50],
+        "tonal_gate": "archival plate, one image plate, multi-column captions"
+      }
+    }
+  ]
+}

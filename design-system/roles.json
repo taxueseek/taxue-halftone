@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "axis": "roles",
+  "description": "轴1 纸(Ground)与轴2 墨(Ink/Mist)的角色系统。纸不算墨；Mist 是主墨浅阶或叠印密度，不是第三色相。",
+  "ground": [
+    {
+      "id": "ground_neutral_white",
+      "name": "中性白",
+      "hex": "#FAFAF7",
+      "role": "Ground",
+      "counts_as_ink": false,
+      "use_for": ["当代编辑", "文化", "事件", "社交", "图主色"],
+      "default": true
+    },
+    {
+      "id": "ground_cool_gray",
+      "name": "冷灰",
+      "hex": "#E9E9E5",
+      "role": "Ground",
+      "counts_as_ink": false,
+      "use_for": ["建筑", "科技", "炭墨主导", "克制品牌"]
+    },
+    {
+      "id": "ground_pale_beige",
+      "name": "浅米",
+      "hex": "#F5F1E8",
+      "role": "Ground",
+      "counts_as_ink": false,
+      "use_for": ["触感", "食物", "旅行", "亲密", "档案", "点名的怀旧"]
+    }
+  ],
+  "ink_roles": {
+    "primary": {
+      "name": "Ink 主墨",
+      "percent_range": [70, 85],
+      "duty": "承担主体结构、主标题、主要刻线",
+      "note": "主墨承载画面主体的结构与主要文本，占印刷面积多数"
+    },
+    "accent": {
+      "name": "辅墨",
+      "percent_range": [15, 30],
+      "duty": "只承担一个具体职务：日期、注释、一个物件、一处叠印交叉",
+      "note": "辅墨必须有明确职务，禁止当装饰洒满页"
+    },
+    "mist": {
+      "name": "Mist 雾阶",
+      "percent_range": [0, 30],
+      "duty": "主墨的浅阶或叠印密度，制造层次而不再加一色",
+      "note": "Mist 不是第三色相；它通过同族浅阶或叠印实现层次"
+    }
+  },
+  "defaults": {
+    "substrate_id": "ground_neutral_white",
+    "primary_percent": [70, 85],
+    "accent_percent": [15, 30],
+    "one_ink_when": ["明确单墨请求", "明确单色请求", "点名一支墨而未提第二色"],
+    "third_ink_rule": "第三色相只能来自 overprint 叠印混色，否则禁止"
+  }
+}

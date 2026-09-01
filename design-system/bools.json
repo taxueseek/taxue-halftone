@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "axis": "bools",
+  "description": "轴3 印刷布尔。两色相交只能三选一；第三色相只允许来自 overprint。",
+  "booleans": [
+    {
+      "id": "knockout",
+      "name": "镂空",
+      "rule": "纯色相，露出的纸即 Ground",
+      "risk": "有露白风险，暗底白衬必须 choke 而非未收缩白边",
+      "use_when": "要干净的纯色边界和不叠色"
+    },
+    {
+      "id": "overprint",
+      "name": "叠印",
+      "rule": "两墨物理重叠混出第三色",
+      "note": "本技能第三色只许来自这里",
+      "use_when": "要叠出的深色与印刷层混合，如 100K 字 always overprint"
+    },
+    {
+      "id": "trap",
+      "name": "套印搭界",
+      "rule": "浅色扩进深色，观看距离上应看不出缺口",
+      "use_when": "浅色字压深网时，防漏白而加细 trap"
+    }
+  ],
+  "rules": [
+    "两色相交必须声明 knockout / overprint / trap 之一，禁止模糊处理",
+    "深色小字（如 100K）永远 overprint，不要 knockout 在彩网上",
+    "浅色字在深网上 knockout + 细 trap",
+    "白字 = 纸，只能 knockout",
+    "禁止用屏幕 Multiply 或数码滤镜冒充叠印",
+    "暗底若要白底衬，必须先 choke，禁止未收缩的白边"
+  ]
+}

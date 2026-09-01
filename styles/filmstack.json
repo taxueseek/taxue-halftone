@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "style_id": "filmstack",
+  "name": "胶片叠层路",
+  "position": "字图同一张膜(加网胶片叠层)",
+  "signature": "粗网本身是图形，字与图共享一层；不规则宽边框住拼层。",
+  "six_axes": {
+    "ground": "ground_neutral_white",
+    "ink_role": {
+      "mode": "overprint_duotone",
+      "primary": {"role": "主墨", "hex": "#263E99", "percent": [70, 85], "duty": "字与主体共享一层"},
+      "accent": {"role": "辅墨", "hex": "#E55D2B", "percent": [15, 30], "duty": "一次叠印交叉或一个焦点"}
+    },
+    "boolean": "overprint",
+    "mechanism": "film_stack",
+    "behavior": "densify",
+    "volume": "balanced"
+  },
+  "typography_bias": "字图一体，字可作主体；重叠网角必须是选择",
+  "subject_bias": "字与图共享同一胶片层；不规则宽框图住拼层",
+  "empty_paper": [20, 40],
+  "platform_bias": ["bilibili_169", "wechat_235"],
+  "avoid": ["信息海报可读性(慎用)", "拼缝超过一处", "第三墨"],
+  "example_prompt": "Screened film layers stacked, type and photo share one stack, crossing angles chosen deliberately, Ultramarine #263E99 + Safety Orange #E55D2B overprint, irregular wide frame, densify toward center, one tape seam."
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "style_id": "swiss",
+  "name": "瑞士海报路",
+  "position": "柔网摄影 + 实色字 + 纸白",
+  "signature": "清晰摄影阶调、实色字、大量纸白；克制、秩序、功能主义。",
+  "six_axes": {
+    "ground": "ground_neutral_white",
+    "ink_role": {
+      "mode": "chromatic_plus_black",
+      "primary": {"role": "主墨(摄影)", "hex": "#C83232", "percent": [70, 85], "duty": "摄影主体与主标题"},
+      "accent": {"role": "黑墨", "hex": "#30343A", "percent": [15, 30], "duty": "长文本与精确小字"}
+    },
+    "boolean": "overprint",
+    "mechanism": "am_halftone",
+    "behavior": "horizon",
+    "volume": "image_lead"
+  },
+  "typography_bias": "实色无衬线标题 + 扁网格信息；摄影走网、字实地",
+  "subject_bias": "摄影主体具清晰阶调，构图以网格与留白为主",
+  "empty_paper": [40, 60],
+  "platform_bias": ["bilibili_169", "wechat_235", "wide_52"],
+  "avoid": ["手绘涂鸦", "装饰质感", "非功能留白"],
+  "example_prompt": "Clear tonal photograph screened in signal red #C83232, solid black #30343A for text, white paper, calm grid, large empty paper, overprint where they meet, contemporary functional."
+}

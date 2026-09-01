@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "axis": "behaviors",
+  "description": "轴5 主体行为。图的「势」往哪走，先于物体类别决定。点和网纹不要写在同一处渐变里。",
+  "behaviors": [
+    {
+      "id": "still",
+      "name": "静置",
+      "direction": "主体静止、陈列、标本般停驻",
+      "use": ["陈列", "标本", "物件", "无图纯字"],
+      "prompt_hint": "still, object holds the field"
+    },
+    {
+      "id": "dissipate",
+      "name": "向外变少",
+      "direction": "从焦点向外用点逐渐变少",
+      "texture_verb": "点(dissipate)",
+      "use": ["渐变消散", "空气", "高光 boundary"],
+      "prompt_hint": "dots dissipate toward the edges"
+    },
+    {
+      "id": "densify",
+      "name": "向内变重",
+      "direction": "向内用交叉网纹渐密变重",
+      "texture_verb": "交叉网纹(densify)",
+      "use": ["暗调", "中心结构", "加密焦点"],
+      "prompt_hint": "crosshatch densifies toward the center"
+    },
+    {
+      "id": "horizon",
+      "name": "地平线",
+      "direction": "主体沿水平轴展开",
+      "use": ["横版", "16:9", "展墙", "横向叙事"],
+      "prompt_hint": "subject spreads along a low horizon"
+    },
+    {
+      "id": "vertical_extend",
+      "name": "沿长边消失",
+      "direction": "主体沿长边逐渐淡出",
+      "use": ["竖版", "9:16", "Story", "长边消隐"],
+      "prompt_hint": "subject extends and fades along the long edge"
+    }
+  ],
+  "guardrails": [
+    "行为和物体类别是两层：先定行为，再定物体",
+    "dissipate(点) 与 densify(网纹) 不要写在同一处渐变里",
+    "同一个图只选一种主导行为；次要行为只能支持它，不能再开一个势"
+  ]
+}
