@@ -18,17 +18,21 @@
 
 ## 示例作品
 
-> 图片放 `examples/` 目录，由技能实际出图后补充（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。
+> 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。雨天雨伞、城市夜归、夜骑三张来自筹备中的「不完美印刷拼贴」风格。
 
-| 待补充 | 待补充 | 待补充 |
+| 深夜便利店（复古编辑） | 标本档案（复古编辑） | 雨天雨伞（不完美印刷拼贴） |
 |:---:|:---:|:---:|
-| 示例图 1 | 示例图 2 | 示例图 3 |
+| <img src="./examples/example-midnight-store.jpg" alt="蓝橙双色深夜便利店半调海报" width="280"> | <img src="./examples/example-herbarium.png" alt="绿色标本档案印刷海报" width="280"> | <img src="./examples/example-rain-umbrella.png" alt="蓝黑撕纸拼贴雨天雨伞海报" width="280"> |
+
+| 城市夜归（不完美印刷拼贴） | 夜骑（不完美印刷拼贴） |
+|:---:|:---:|
+| <img src="./examples/example-night-walk.png" alt="蓝色撕纸拼贴城市夜归海报" width="280"> | <img src="./examples/example-night-ride.png" alt="蓝色撕纸拼贴夜骑海报" width="280"> |
 
 ## 六种风格
 
 | 风格 | 色卡 | 特点 |
 |---|---|---|
-| **当代编辑**（editorial） | ![editorial](./swatches/editorial.svg) | 蓝 + 陶土橙，半调网点，一个主体占大头、文字压上去，最常用 |
+| **复古编辑**（editorial） | ![editorial](./swatches/editorial.svg) | 蓝 + 陶土橙，半调网点，一个主体占大头、文字压上去，旧杂志编辑排版的复古感，最常用 |
 | **波兰海报**（polish） | ![polish](./swatches/polish.svg) | 单色高反差，字本身就是画面，干净利落 |
 | **瑞士海报**（swiss） | ![swiss](./swatches/swiss.svg) | 红 + 黑，照片阶调清楚、实色大字、留白多，克制规矩 |
 | **孔版小册**（riso_zine） | ![riso_zine](./swatches/riso_zine.svg) | 绿 + 紫，主体小、纸留大片白，像手工印的小册子 |

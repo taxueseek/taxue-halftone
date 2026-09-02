@@ -9,7 +9,7 @@
       "hex": "#FAFAF7",
       "role": "Ground",
       "counts_as_ink": false,
-      "use_for": ["当代编辑", "文化", "事件", "社交", "图主色"],
+      "use_for": ["复古编辑", "文化", "事件", "社交", "图主色"],
       "default": true
     },
     {
