@@ -83,10 +83,10 @@ def main():
         if vol not in vol_profiles:
             fail(f"{sid} volume '{vol}' not in volume.json")
 
-        # 3) ink role quantified & ≤2 inks
+        # 3) ink role quantified & ≤2 inks (imperfect_collage allows a jump third, ≤3)
         ink = axes.get("ink_role", {})
         hexes = []
-        for key in ("primary", "accent"):
+        for key in ("primary", "accent", "jump"):
             plate = ink.get(key)
             if plate:
                 h = plate.get("hex")
@@ -104,8 +104,9 @@ def main():
                 duty = plate.get("duty", "")
                 if not duty:
                     fail(f"{sid} ink.{key} needs a duty")
-        if len(hexes) > 2:
-            fail(f"{sid} uses more than two inks: {hexes}")
+        max_inks = 3 if sid == "imperfect_collage" else 2
+        if len(hexes) > max_inks:
+            fail(f"{sid} uses more than {max_inks} inks: {hexes}")
 
         # 4) mode consistency
         mode = ink.get("mode", "")

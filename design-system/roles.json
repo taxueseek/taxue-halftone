@@ -4,6 +4,15 @@
   "description": "轴1 纸(Ground)与轴2 墨(Ink/Mist)的角色系统。纸不算墨；Mist 是主墨浅阶或叠印密度，不是第三色相。",
   "ground": [
     {
+      "id": "ground_warm_white",
+      "name": "暖白",
+      "hex": "#FAF7F0",
+      "role": "Ground",
+      "counts_as_ink": false,
+      "use_for": ["不完美拼贴", "信息卡", "触感纸", "撕纸基底"],
+      "default": false
+    },
+    {
       "id": "ground_neutral_white",
       "name": "中性白",
       "hex": "#FAFAF7",
@@ -47,6 +56,12 @@
       "percent_range": [0, 30],
       "duty": "主墨的浅阶或叠印密度，制造层次而不再加一色",
       "note": "Mist 不是第三色相；它通过同族浅阶或叠印实现层次"
+    },
+    "jump": {
+      "name": "跳色（imperfect_collage 专属）",
+      "percent_range": [0, 5],
+      "duty": "一处小面积揭示、一处叠印交叉或高光点缀，不进主体结构",
+      "note": "仅 imperfect_collage 风格的第三色通道；面积 ≤5%，须写 HEX；其他风格第三色仍只来自 overprint 混色"
     }
   },
   "defaults": {

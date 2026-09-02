@@ -59,10 +59,10 @@ def main():
             if key in a and a[key] != axes.get(key):
                 fail(f"eval {eid}: {key} assertion {a[key]} != style {axes.get(key)}")
 
-        # ink hexes vs style ink roles
+        # ink hexes vs style ink roles (include jump third)
         if "ink_hexes" in a:
             style_hexes = []
-            for k in ("primary", "accent"):
+            for k in ("primary", "accent", "jump"):
                 pl = axes.get("ink_role", {}).get(k)
                 if pl and pl.get("hex"):
                     style_hexes.append(pl["hex"])

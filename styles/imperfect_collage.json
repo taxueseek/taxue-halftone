@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "style_id": "imperfect_collage",
+  "name": "不完美印刷拼贴",
+  "position": "独立风格（撕纸拼贴层叠）",
+  "signature": "撕纸拼贴 + 专色场 + 黑白半调主体 + 上图下卡信息分区",
+  "six_axes": {
+    "ground": "ground_warm_white",
+    "ink_role": {
+      "mode": "chromatic_plus_black",
+      "primary": {
+        "role": "主墨（专色场）",
+        "hex": "#1DA1F2",
+        "percent": [70, 85],
+        "duty": "大面积专色场、图像层底色、撕开揭示的色块"
+      },
+      "accent": {
+        "role": "黑墨",
+        "hex": "#141414",
+        "percent": [15, 30],
+        "duty": "前景半调主体、标题与信息卡文字、主要刻线"
+      },
+      "jump": {
+        "role": "跳色",
+        "hex": "#F7B500",
+        "percent": [0, 5],
+        "duty": "一处小面积揭示、一处叠印交叉或高光点缀，不进主体结构"
+      }
+    },
+    "boolean": "overprint",
+    "mechanism": "torn_paper_collage",
+    "behavior": "still",
+    "volume": "balanced"
+  },
+  "jump_ink_note": "跳色规则（本风格专属，不受 ≤2 墨约束）：第三色 = 跳色，面积 ≤5%，只做小面积揭示、叠印交叉或高光点缀，不进主体结构；须写 HEX。禁用彩虹渐变与多跳色混色。",
+  "typography_bias": "粗新怪诞无衬线（Grotesk）；标题 ≤6 字/词、副题一行；信息卡留白、稳定网格、清楚层级、一个明确焦点；默认仅中文文案，禁止中英混排",
+  "subject_bias": "1 个主角 + ≤3 个道具；视觉隐喻直接带一点机智；缩到 200px 只剩一个主形；主体结构链按 subject.json，遮标题 3 秒认出",
+  "empty_paper": [30, 55],
+  "platform_bias": ["xiaohongshu_34", "bilibili_169", "wechat_235"],
+  "intensity": "默认 2：大留白、单撕边、无碎片字；≥4 才出现重复短语碎片或纵向撕裂",
+  "avoid": [
+    "廉价复古做旧",
+    "无序垃圾拼贴",
+    "真实品牌/Logo/鸟标",
+    "平滑矢量图",
+    "过度故障特效",
+    "彩虹渐变",
+    "霓虹故障",
+    "塑料 3D",
+    "中英混排",
+    "标题乱码",
+    "可指认社交平台空状态构图"
+  ],
+  "example_prompt": "Torn-paper editorial collage in three layers: warm white paper #FAF7F0 ground, large spot blue field #1DA1F2, foreground B/W coarse AM halftone subject (high-contrast editorial photography, newsprint grain, slight copy noise, ≤1mm registration drift). 1-2 torn edges as reveal, rough image layer, calm info card below. Grotesk title ≤6 chars, no other text. No vintage aging, no clip-art, no gradient."
+}

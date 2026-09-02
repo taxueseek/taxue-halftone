@@ -99,6 +99,23 @@
         "empty_paper_range": [30, 50],
         "tonal_gate": "archival plate, one image plate, multi-column captions"
       }
+    },
+    {
+      "id": 7,
+      "style": "imperfect_collage",
+      "prompt": "用不完美印刷拼贴做一张竖版海报：城市夜归，深夜两点的街，标题「凌晨两点的街」。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "torn_paper_collage",
+        "ground": "ground_warm_white",
+        "mode": "chromatic_plus_black",
+        "ink_hexes": ["#1DA1F2", "#141414", "#F7B500"],
+        "theme_roles": ["primary: large spot field+image base", "accent: B/W halftone subject+title", "jump: small highlight ≤5% not in subject structure"],
+        "volume": "balanced",
+        "behavior": "still",
+        "empty_paper_range": [30, 55],
+        "tonal_gate": "name the spot layer, the torn edge, and where paper shows"
+      }
     }
   ]
 }

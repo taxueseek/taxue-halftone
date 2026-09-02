@@ -62,6 +62,24 @@
       "prompt_hint": "letterpress relief, kiss impression, no fake dropshadow"
     },
     {
+      "id": "torn_paper_collage",
+      "name": "撕纸拼贴层叠",
+      "physics": "纸层叠压：纸底 / 专色场 / 半调主体三层；撕纸边揭示或分区，专色场与信息卡分层",
+      "wins": ["产品功能页", "社媒横幅", "叙事性海报", "有意不完美的编辑感", "三层结构性构图"],
+      "loses": ["需要绝对干净的印厂级边线", "极细信息排版（信息卡另层处理）", "连续调照片主导"],
+      "rules": {
+        "layers": "三层必在：纸底(Ground) + 大面积专色场 + 前景黑白半调主体；信息卡可与纸底同层",
+        "torn_edges": "撕纸边 1–2 道，只用于揭示或分区，禁止撒满；撕边方向与主体走向一致",
+        "registration": "允许 ≤1mm 套印错位（肉眼可察但结构不裂）",
+        "imperfections": "新闻纸颗粒 + 轻微复印噪点 + 轻微油墨不均，一次最多两类，禁止 grain+scratch+咖啡渍三连",
+        "image_layer": "图像层粗粝：高反差编辑摄影再制，阴影是清晰可见的粗 AM 新闻纸网点，不用磨皮渐变",
+        "info_layer": "信息层清醒：留白、稳定网格、清楚层级、一个明确焦点；禁碎片字堆满卡片",
+        "intensity": "强度 1–5：默认 2（大留白、单撕边、无碎片字）；≥4 才允许重复短语碎片或纵向撕裂",
+        "type": "信息卡上粗新怪诞无衬线（Grotesk），标题 ≤6 字/词，正文实地不加网"
+      },
+      "prompt_hint": "torn-paper collage, three layers, spot-color field + screened B/W subject, 1-2 torn edges as reveal, ≤1mm registration drift, newsprint grain, rough image layer / calm info card"
+    },
+    {
       "id": "film_stack",
       "name": "胶片叠层",
       "physics": "加网胶片叠在一起，粗网本身是图形",

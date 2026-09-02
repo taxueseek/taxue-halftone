@@ -18,17 +18,21 @@
 
 ## 示例作品
 
-> 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。雨天雨伞、城市夜归、夜骑三张来自筹备中的「不完美印刷拼贴」风格。
+> 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。七个风格各一张，不完美印刷拼贴有三张。
 
-| 深夜便利店（复古编辑） | 标本档案（复古编辑） | 雨天雨伞（不完美印刷拼贴） |
+| 深夜便利店（复古编辑） | 标本档案（标本档案） | 无声的秩序（瑞士海报） |
 |:---:|:---:|:---:|
-| <img src="./examples/example-midnight-store.jpg" alt="蓝橙双色深夜便利店半调海报" width="280"> | <img src="./examples/example-herbarium.png" alt="绿色标本档案印刷海报" width="280"> | <img src="./examples/example-rain-umbrella.png" alt="蓝黑撕纸拼贴雨天雨伞海报" width="280"> |
+| <img src="./examples/example-midnight-store.jpg" alt="蓝橙双色深夜便利店半调海报" width="280"> | <img src="./examples/example-herbarium.png" alt="绿色标本档案印刷海报" width="280"> | <img src="./examples/example-concert-hall.jpg" alt="红色摄影展海报无声的秩序" width="280"> |
 
-| 城市夜归（不完美印刷拼贴） | 夜骑（不完美印刷拼贴） |
-|:---:|:---:|
-| <img src="./examples/example-night-walk.png" alt="蓝色撕纸拼贴城市夜归海报" width="280"> | <img src="./examples/example-night-ride.png" alt="蓝色撕纸拼贴夜骑海报" width="280"> |
+| 午夜电台（胶片叠层） | 回声（波兰海报） | 海风集（孔版小册） |
+|:---:|:---:|:---:|
+| <img src="./examples/example-midnight-radio.png" alt="蓝色胶片叠层午夜电台海报" width="280"> | <img src="./examples/example-echo.png" alt="黑色高反差回声海报" width="280"> | <img src="./examples/example-seashell.png" alt="绿色紫色海风集封面" width="280"> |
 
-## 六种风格
+| 雨天雨伞（不完美印刷拼贴） | 城市夜归（不完美印刷拼贴） | 夜骑（不完美印刷拼贴） |
+|:---:|:---:|:---:|
+| <img src="./examples/example-rain-umbrella.png" alt="蓝黑撕纸拼贴雨天雨伞海报" width="280"> | <img src="./examples/example-night-walk.png" alt="蓝色撕纸拼贴城市夜归海报" width="280"> | <img src="./examples/example-night-ride.png" alt="蓝色撕纸拼贴夜骑海报" width="280"> |
+
+## 七种风格
 
 | 风格 | 色卡 | 特点 |
 |---|---|---|
@@ -38,6 +42,7 @@
 | **孔版小册**（riso_zine） | ![riso_zine](./swatches/riso_zine.svg) | 绿 + 紫，主体小、纸留大片白，像手工印的小册子 |
 | **胶片叠层**（filmstack） | ![filmstack](./swatches/filmstack.svg) | 蓝 + 橙，粗网点本身就是图形，几层叠片、宽边框住 |
 | **标本档案**（archival） | ![archival](./swatches/archival.svg) | 绿 + 黑，标题 + 一张规整图版 + 多栏注文，像标本观察笔记 |
+| **不完美印刷拼贴**（imperfect_collage） | ![imperfect_collage](./swatches/imperfect_collage.svg) | 暖白纸 + 大面积专色场 + 黑白半调主体，撕纸边揭示，上图下卡，有意的不完美 |
 
 想用哪个风格，直接点名；不说风格它会按主题和用途选。
 
