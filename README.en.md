@@ -1,0 +1,88 @@
+<div align="center">
+
+[中文](./README.md) · **English**
+
+# taxue-halftone · Halftone Poster
+
+**Turn a phrase, a theme, or a photo into a print-feel poster or cover.**
+
+[![Version](https://img.shields.io/badge/VERSION-1.0.0-2ea44f?style=flat-square&labelColor=333)](./CHANGELOG.md)
+[![Skills](https://img.shields.io/badge/SKILLS-1-2ea44f?style=flat-square&labelColor=333)](./SKILL.md)
+[![Stars](https://img.shields.io/github/stars/taxueseek/taxue-halftone?style=flat-square&label=STARS&color=e37f2c&labelColor=333)](https://github.com/taxueseek/taxue-halftone/stargazers)
+[![Validate](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml/badge.svg)](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml)
+[![SKILL.md](https://img.shields.io/badge/Agent-SKILL.md-214f9b?style=flat-square&labelColor=333)](./SKILL.md)
+
+</div>
+
+This skill makes "print-feel" images: halftone dots, Riso, woodcut, cyanotype, photocopy aesthetics. It defaults to two colors (one dominant, one accent), or a single color on request. It decides the palette, layout, and typography for you, and outputs a complete reusable prompt.
+
+## Examples
+
+> Images will be added to the `examples/` directory as the skill generates them (see [ASSET-LICENSE.md](./ASSET-LICENSE.md)).
+
+| Coming soon | Coming soon | Coming soon |
+|:---:|:---:|:---:|
+| Example 1 | Example 2 | Example 3 |
+
+## Six styles
+
+| Style | Swatch | What it looks like |
+|---|---|---|
+| **Editorial** | ![editorial](./swatches/editorial.svg) | Blue + terracotta, halftone dots, one dominant object with type crossing over it. The default. |
+| **Polish** | ![polish](./swatches/polish.svg) | Single-color high contrast, the type is the image, clean and sharp |
+| **Swiss** | ![swiss](./swatches/swiss.svg) | Red + black, clear photo tones, solid type, generous white space, restrained |
+| **Riso zine** | ![riso_zine](./swatches/riso_zine.svg) | Green + violet, small subject, lots of paper, like a hand-printed zine |
+| **Filmstack** | ![filmstack](./swatches/filmstack.svg) | Blue + orange, coarse dots as the graphic itself, layered sheets in a wide frame |
+| **Archival** | ![archival](./swatches/archival.svg) | Green + black, title + one tidy plate + multi-column notes, like a specimen field note |
+
+Name the style you want; if you don't, it picks one from your subject and intent.
+
+## How to use
+
+Install:
+
+```bash
+npx skills add taxueseek/taxue-halftone
+```
+
+Then just say, for example:
+
+- "Make a vertical halftone poster about a midnight convenience store, headline 'still open'."
+- "Turn this photo into a Riso zine cover titled 'Night Radio'."
+- "Make a single-color high-contrast silhouette poster about loneliness, no text."
+
+You can also type `/taxue-halftone` to trigger it. Each run returns three things: the image (when a generation tool is available), the exact production prompt, and a palette-and-layout note. Point out what you don't like and it changes one thing at a time.
+
+## Use cases
+
+- Posters: events, exhibitions, city walks, conceptual posters
+- Platform covers: Xiaohongshu, WeChat articles, podcasts, Bilibili, avatars, wide headers
+- Brand materials: postcards, invitations, tickets, menus, packaging stickers
+- Books and publications: covers, title pages, chapter openers, zine interiors
+- Keepsakes: travel journals, photo album covers, anniversary cards
+- Words: literary excerpts, poetry, personal statements
+
+## Basic rules
+
+- **At most two colors**: one dominant color carries the subject and headline; one accent color has exactly one job (date, annotation, marking one object). Never sprinkle the accent color around as decoration.
+- **Paper is part of the image**: the ground is not a color. Light paper with dark ink, dark paper with light type, both work.
+- **Type and image take turns**: when type is loud, the image steps back, and vice versa. Never both at full volume.
+- **Print feel comes from dots, not aging**: halftone and Riso do not mean yellowed, sepia, or nostalgic by default.
+
+## Validation
+
+The rules are not just documentation: every style's values, palettes, and mechanisms live in machine-readable catalogs with evaluation cases. Change anything and the checks catch it; GitHub Actions runs them automatically on every push and pull request.
+
+```bash
+scripts/run_tests.sh                    # run all checks at once
+scripts/validate_styles.py <style_id>   # validate a single style
+scripts/render_style_card.py <style_id> # regenerate the swatch card
+```
+
+## Changelog
+
+- **v1.0.0** (2026-09-01): Initial release. Six styles, six print mechanisms, machine validation, and evaluation cases. See [CHANGELOG.md](./CHANGELOG.md).
+
+## License
+
+Code and skill content are MIT-licensed ([LICENSE](./LICENSE)); images in `examples/` follow [ASSET-LICENSE.md](./ASSET-LICENSE.md) and are not covered by MIT.

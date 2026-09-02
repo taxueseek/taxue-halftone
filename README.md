@@ -1,5 +1,7 @@
 <div align="center">
 
+**中文** · [English](./README.en.md)
+
 # taxue-halftone · 半调海报
 
 **把一句话、一个主题或一张照片，做成一张有印刷质感的封面。**
@@ -12,7 +14,7 @@
 
 </div>
 
-它做的是「印刷感」的图：半调网点、Riso 孔版、木刻、蓝晒、复印机那种质感。默认两支墨（一主一辅），也可以只上一支墨，具体用什么、怎么配色、字放哪，它都会配好，最后给出一份完整可复用的提示词。
+它做的是「印刷感」的图：半调网点、Riso 孔版、木刻、蓝晒、复印机那种质感。默认双色（一主一辅），也可以只用单色，具体怎么配色、字放哪，它都会配好，最后给出一份完整可复用的提示词。
 
 ## 示例作品
 
@@ -24,10 +26,10 @@
 
 ## 六种风格
 
-| 风格 | 色票 | 特点 |
+| 风格 | 色卡 | 特点 |
 |---|---|---|
 | **当代编辑**（editorial） | ![editorial](./swatches/editorial.svg) | 蓝 + 陶土橙，半调网点，一个主体占大头、文字压上去，最常用 |
-| **波兰海报**（polish） | ![polish](./swatches/polish.svg) | 单墨高反差，字本身就是画面，干净利落 |
+| **波兰海报**（polish） | ![polish](./swatches/polish.svg) | 单色高反差，字本身就是画面，干净利落 |
 | **瑞士海报**（swiss） | ![swiss](./swatches/swiss.svg) | 红 + 黑，照片阶调清楚、实色大字、留白多，克制规矩 |
 | **孔版小册**（riso_zine） | ![riso_zine](./swatches/riso_zine.svg) | 绿 + 紫，主体小、纸留大片白，像手工印的小册子 |
 | **胶片叠层**（filmstack） | ![filmstack](./swatches/filmstack.svg) | 蓝 + 橙，粗网点本身就是图形，几层叠片、宽边框住 |
@@ -47,7 +49,7 @@ npx skills add taxueseek/taxue-halftone
 
 - 「用半调做一张凌晨便利店的竖版海报，标题写 still open」
 - 「把这张照片做成孔版 Riso 封面，标题是『深夜电台』」
-- 「做一个单墨高反差剪影海报，主题是孤独，不要文字」
+- 「做一个单色高反差剪影海报，主题是孤独，不要文字」
 
 也可以输入 `/taxue-halftone` 触发。每次会给你三样东西：一张图（有生图工具时）、一份完整提示词、一份配色和版式的说明。不满意就指出来，它一次只改一处。
 
@@ -62,8 +64,8 @@ npx skills add taxueseek/taxue-halftone
 
 ## 基本规矩
 
-- **最多两支墨**：一支主墨管主体和标题，一支辅墨只做一件事（日期、注释、勾一个物件），不洒满页当装饰
-- **纸是画面的一部分**：底色不算颜色，浅色纸配深墨、深纸配浅字都算好
+- **最多双色**：一个主色管主体和标题，一个辅色只做一件事（日期、注释、勾一个物件），不洒满页当装饰
+- **纸是画面的一部分**：底色不算颜色，浅色纸配深色、深纸配浅字都算好
 - **字和图分主次**：字大声图就退，图大声字就退，不两个都抢
 - **印刷感靠网点不靠做旧**：用半调、Riso 不等于要泛黄、怀旧
 
@@ -74,7 +76,7 @@ npx skills add taxueseek/taxue-halftone
 ```bash
 scripts/run_tests.sh                    # 一次跑完所有检查
 scripts/validate_styles.py <style_id>   # 单独查某个风格
-scripts/render_style_card.py <style_id> # 重新生成色票图
+scripts/render_style_card.py <style_id> # 重新生成色卡图
 ```
 
 ## 更新记录
