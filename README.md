@@ -18,7 +18,7 @@
 
 ## 示例作品
 
-> 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。十个风格中九个已有示例图（中式剪纸待补），不完美印刷拼贴与点阵解构各有三张，点阵剪纸有一张。
+> 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。九种风格全部有示例图：不完美印刷拼贴与点阵解构各有三张，其余风格各一张；变体点阵剪纸暂无样张。
 
 | 深夜便利店（复古编辑） | 标本档案（标本档案） | 无声的秩序（瑞士海报） |
 |:---:|:---:|:---:|
@@ -36,11 +36,11 @@
 |:---:|:---:|:---:|
 | <img src="./examples/example-dot-dissolve-lighthouse.jpg" alt="蓝色与橙色点阵解构雾中灯塔海报" width="280"> | <img src="./examples/example-dot-dissolve-jellyfish.jpg" alt="蓝色与橙红点阵解构深海之灯水母海报" width="280"> | <img src="./examples/example-dot-dissolve-fenghuaxueyue.jpg" alt="蓝黑山水与朱红月位点阵解构风花雪月海报" width="280"> |
 
-| 海阔天空（点阵剪纸） |  |  |
+| 海阔天空（中式剪纸） |  |  |
 |:---:|:---:|:---:|
-| <img src="./examples/example-paper-cut-halftone-sea-sky.jpg" alt="蓝黑剪纸山海鱼群与粉色跳色点阵剪纸海报" width="280"> |  |  |
+| <img src="./examples/example-paper-cut-group-sea-sky.jpg" alt="蓝黑剪纸山海鱼群与粉色跳色中式剪纸海报" width="280"> |  |  |
 
-## 十种风格
+## 九种风格 + 一个变体
 
 | 风格 | 色卡 | 特点 |
 |---|---|---|
@@ -53,7 +53,7 @@
 | **不完美印刷拼贴**（imperfect_collage） | ![imperfect_collage](./swatches/imperfect_collage.svg) | 暖白纸 + 大面积专色场 + 黑白半调主体，撕纸边揭示，上图下卡，有意的不完美 |
 | **点阵解构**（dot_dissolve） | ![dot_dissolve](./swatches/dot_dissolve.svg) | 紫 + 红，复古丝网圆点阵，主体从具象解构成点阵、颗粒和波纹，粗体字融进点阵场，内置元提示词模板（只输入主题即可出图） |
 | **中式剪纸**（paper_cut_group） | ![paper_cut_group](./swatches/paper_cut_group.svg) | 墨黑 + 朱红，剪纸剪影层层交错，细节靠白色负空间镂空，一枚跳色例外成员，上图下卡，内置元提示词模板（只输入主题即可出图） |
-| **点阵剪纸**（paper_cut_halftone） | ![paper_cut_halftone](./swatches/paper_cut_halftone.svg) | 主色 + 纸色 + 克制跳色，点阵解构与中式剪纸的混搭——剪纸窗花轮廓配粗圆网点铺形，暗部不断网，用色倾向三选一，上图下卡，内置元提示词模板（主题唯一必填） |
+| **点阵剪纸**（paper_cut_halftone，变体） | ![paper_cut_halftone](./swatches/paper_cut_halftone.svg) | 主色 + 纸色 + 克制跳色，点阵解构与中式剪纸的混搭——剪纸窗花轮廓配粗圆网点铺形，暗部不断网，用色倾向三选一，上图下卡，内置元提示词模板（主题唯一必填） |
 
 想用哪个风格，直接点名；不说风格它会按主题和用途选。
 
@@ -100,7 +100,7 @@ npx skills add taxueseek/taxue-halftone
 
 ## 工程校验
 
-规范不只写在文档里：十种风格的取值、配色、机制都有机器可读的清单，配有评测用例。改任何一处，跑一遍检查就能发现有没有改坏，push 或提 PR 时 GitHub Actions 会自动跑。
+规范不只写在文档里：九种风格与变体的取值、配色、机制都有机器可读的清单，配有评测用例。改任何一处，跑一遍检查就能发现有没有改坏，push 或提 PR 时 GitHub Actions 会自动跑。
 
 ```bash
 scripts/run_tests.sh                    # 一次跑完所有检查
@@ -110,7 +110,7 @@ scripts/render_style_card.py <style_id> # 重新生成色卡图
 
 ## 更新记录
 
-- **v1.1.0**（2026-09-03）：新增第七至第十套风格 imperfect_collage（不完美印刷拼贴）、dot_dissolve（点阵解构海报路）、paper_cut_group（中式剪纸路）、paper_cut_halftone（点阵剪纸路）与第七种印刷机制 paper_cut_collage（剪纸拼贴），均内置元提示词模板；补四张实测样张（雾中灯塔、深海之灯、风花雪月、海阔天空）；新增「随机性与创造力」说明与生图模型建议；风格更名——中式剪纸群像→中式剪纸、网点剪纸群像→点阵剪纸（实际效果为点阵解构与中式剪纸的混搭），style_id 不变。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.1.0**（2026-09-03）：新增第七至第九套风格 imperfect_collage（不完美印刷拼贴）、dot_dissolve（点阵解构海报路）、paper_cut_group（中式剪纸路）与第七种印刷机制 paper_cut_collage（剪纸拼贴），均内置元提示词模板；另新增变体 paper_cut_halftone（点阵剪纸路——点阵解构与中式剪纸的混搭）；补四张实测样张（雾中灯塔、深海之灯、风花雪月、海阔天空，其中海阔天空为中式剪纸样张）；新增「随机性与创造力」说明与生图模型建议；风格更名——中式剪纸群像→中式剪纸、网点剪纸群像→点阵剪纸（定性为变体），style_id 不变。详见 [CHANGELOG.md](./CHANGELOG.md)。
 - **v1.0.0**（2026-09-01）：首次发布。六种风格、六种印刷质感、机器校验和评测用例。详见 [CHANGELOG.md](./CHANGELOG.md)。
 
 ## License

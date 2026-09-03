@@ -1,6 +1,6 @@
 # 示例图集
 
-本目录存放由技能实际出图产出的示例海报，九个风格有覆盖（不完美印刷拼贴三张、点阵解构三张、点阵剪纸一张；中式剪纸待补）。
+本目录存放由技能实际出图产出的示例海报，九种风格全部有覆盖（不完美印刷拼贴三张、点阵解构三张、其余风格各一张）；变体点阵剪纸暂无样张。
 
 | 文件 | 场景 | 风格 |
 |---|---|---|
@@ -16,7 +16,7 @@
 | `example-dot-dissolve-lighthouse.jpg` | 雾中灯塔 | 点阵解构（dot_dissolve） |
 | `example-dot-dissolve-jellyfish.jpg` | 深海之灯 · 水母 | 点阵解构（dot_dissolve） |
 | `example-dot-dissolve-fenghuaxueyue.jpg` | 风花雪月 | 点阵解构（dot_dissolve） |
-| `example-paper-cut-halftone-sea-sky.jpg` | 海阔天空 | 点阵剪纸（paper_cut_halftone） |
+| `example-paper-cut-group-sea-sky.jpg` | 海阔天空 | 中式剪纸（paper_cut_group） |
 
 - 图片来源：全部为技能出图产物，非外部素材
 - 版权：本目录内图片按 [ASSET-LICENSE.md](../ASSET-LICENSE.md) 单独管理，不随 MIT 分发
