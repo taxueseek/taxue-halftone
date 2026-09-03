@@ -116,6 +116,57 @@
         "empty_paper_range": [30, 55],
         "tonal_gate": "name the spot layer, the torn edge, and where paper shows"
       }
+    },
+    {
+      "id": 8,
+      "style": "dot_dissolve",
+      "prompt": "用点阵解构海报做一张竖版艺术海报，主题是「季风的边界」，主标题「季风」。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "am_halftone",
+        "ground": "ground_neutral_white",
+        "mode": "complementary_duotone",
+        "ink_hexes": ["#63365F", "#C83232"],
+        "theme_roles": ["primary: subject dot matrix + CN headline", "accent: subtitle, one object or one overprint crossing"],
+        "volume": "balanced",
+        "behavior": "dissipate",
+        "empty_paper_range": [30, 55],
+        "tonal_gate": "can name the two plates, their angles, the overprint accent and where paper shows; type solid not screened, dots dissipate, punctuation comma and period only"
+      }
+    },
+    {
+      "id": 9,
+      "style": "paper_cut_group",
+      "prompt": "用中式剪纸做一张竖幅海报，主题「鱼跃龙门」，群像是鲤鱼群。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "paper_cut_collage",
+        "ground": "ground_warm_white",
+        "mode": "chromatic_plus_black",
+        "ink_hexes": ["#30343A", "#C41E3A"],
+        "theme_roles": ["primary: paper-cut group silhouettes", "accent: one jump-color member, ≤1/10 of the group, at edge or corner"],
+        "volume": "image_lead",
+        "behavior": "still",
+        "empty_paper_range": [35, 60],
+        "tonal_gate": "can name the cut layer, the negative-space cutouts, the one jump member and where paper shows; no screening, no drop shadows"
+      }
+    },
+    {
+      "id": 10,
+      "style": "paper_cut_halftone",
+      "prompt": "用点阵剪纸做一张竖幅海报，主题「山外有山」，群像是层叠山峦，用色倾向主色底色跳色三色。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "am_halftone",
+        "ground": "ground_warm_white",
+        "mode": "chromatic_plus_black",
+        "ink_hexes": ["#30343A", "#A68A64"],
+        "theme_roles": ["primary: paper-cut group silhouettes built from coarse round dots 70-90%, highlights knock out to paper", "accent: at most one muted jump-color member, ≤1/10 of the group, at edge or corner"],
+        "volume": "image_lead",
+        "behavior": "still",
+        "empty_paper_range": [40, 65],
+        "tonal_gate": "can name the main plate at 45 degrees, the jump plate offset ≥30 degrees, and where paper shows; interiors are dots never flat fill, no 100% solids, one 1mm misregistration as natural press error"
+      }
     }
   ]
 }

@@ -80,6 +80,23 @@
       "prompt_hint": "torn-paper collage, three layers, spot-color field + screened B/W subject, 1-2 torn edges as reveal, ≤1mm registration drift, newsprint grain, rough image layer / calm info card"
     },
     {
+      "id": "paper_cut_collage",
+      "name": "剪纸拼贴",
+      "physics": "实色剪纸层叠：刀口轮廓，细节全靠白色负空间镂空刻画，深度只靠层层交错；无网点无投影",
+      "wins": ["群像民俗母题", "节庆与生肖", "窗花感", "东方克制", "干净利落"],
+      "loses": ["连续调摄影阶调", "皮肤织物层次", "微字（信息卡另层处理）"],
+      "rules": {
+        "layers": "两层必在：暖白纸底(Ground) + 群像剪纸层；信息卡可与纸底同层（下方暖白卡）",
+        "cutout": "细节全靠白色负空间镂空，镂空处必露纸色；镂空是唯一细节语言，禁描边",
+        "group": "群像成员层层交错，成员间留纸缝；至多一枚例外成员整枚用跳色（≤群像十分之一，边缘或角落，全图唯一高饱和亮色）；至多一枚低饱和点缀（基底色 Mist 浅阶，禁新色相）",
+        "edges": "剪纸刀口平滑流畅（窗花刀口）；撕边至多一道，只用于分区或揭示",
+        "depth": "禁微 3D、塑料投影、渐变、网点；层间深度只靠形状交叠与镂空",
+        "type": "信息卡粗无衬线实地，标题 ≤6 字，副题 ≤10 字；除标题副题外零文字零标点（标点仅逗号句号）；CJK 校对失败则后期上字",
+        "paper": "皮宣质感，纤维纹理极轻，当代纸不做旧"
+      },
+      "prompt_hint": "layered paper-cut silhouettes on warm-white pi-xuan paper, white negative-space cutout details, knife-smooth edges, one jump-color member at edge or corner, info card below, no screening, no drop shadows"
+    },
+    {
       "id": "film_stack",
       "name": "胶片叠层",
       "physics": "加网胶片叠在一起，粗网本身是图形",
@@ -96,6 +113,7 @@
   "guardrails": [
     "一次只用一种主导机制",
     "禁止 AM + grain + scratch + 咖啡渍叠在一起",
+    "剪纸（paper_cut_collage）与撕纸（torn_paper_collage）是两种机制：剪纸=刀口+负空间镂空+无网点；撕纸=专色场+黑白半调主体+新闻纸颗粒；签名不混用",
     "机制不是 AM 时：第 5 段改写为该机制的痕迹（1-bit 颗粒/硬阈值；平阶硬边；凸版压痕），不要仍写 coarse AM",
     "Riso 是印刷机，Halftone 是加网，不要把两个词当可互换滤镜名",
     "切换机制时读 docs/DESIGN.md 的机制输赢判定，并跑 validate_mechanism 检查引用一致"

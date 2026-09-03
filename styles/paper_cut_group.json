@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "style_id": "paper_cut_group",
+  "name": "中式剪纸路",
+  "position": "中式剪纸窗花：刀口剪影+负空间镂空，上图下卡，干净克制；内置元提示词模板，主题为唯一必填",
+  "signature": "群像剪纸剪影层层交错，细节全靠白色负空间镂空刻画，远看像立得住的窗花；暖白皮宣底，至多一枚跳色例外成员，下方信息卡只放标题与副题。",
+  "six_axes": {
+    "ground": "ground_warm_white",
+    "ink_role": {
+      "mode": "chromatic_plus_black",
+      "primary": {"role": "主墨（基底色）", "hex": "#30343A", "percent": [70, 85], "duty": "群像剪影主体"},
+      "accent": {"role": "辅墨（跳色）", "hex": "#C41E3A", "percent": [5, 10], "duty": "一枚例外成员整枚跳色（≤群像十分之一，边缘或角落，全图唯一高饱和亮色）"}
+    },
+    "boolean": "knockout",
+    "mechanism": "paper_cut_collage",
+    "behavior": "still",
+    "volume": "image_lead"
+  },
+  "typography_bias": "信息卡粗无衬线实地；标题 ≤6 字，副题 ≤10 字，文案通俗；除标题副题外零文字零标点（标点仅逗号句号）；字不上网（机制无网），层级靠字号与留白",
+  "subject_bias": "群像层层交错占 40–70%，成员间留纸缝，细节全靠白色负空间镂空；一枚例外成员整枚跳色；遮标题 3 秒可辨",
+  "empty_paper": [35, 60],
+  "platform_bias": ["xiaohongshu_34", "avatar_11"],
+  "avoid": ["微 3D", "塑料投影", "孔版网点", "霓虹故障", "多色剪纸", "茶渍复古", "剪贴簿", "印章、年号、平台名", "标题乱码", "碎片字", "第三色相"],
+  "example_prompt": "Vertical 3:4 paper-cut collage poster, clean and restrained, Chinese window-flower temperament: a group of knife-cut silhouette members layered and interlocking on warm-white #FAF7F0 pi-xuan paper, all details carved by white negative-space cutouts, knife-smooth flowing contours, depth from layering only. Charcoal #30343A carries the whole group; one exception member in vermilion #C41E3A (at most one tenth of the group, at edge or corner) is the only high-saturation bright color; at most one low-saturation mist tint among members, never a new hue; at most one torn edge for reveal or sectioning. Info card on warm white below: bold grotesque sans, CN title and subtitle only, no other text or punctuation; generous white space, no micro-3D, no plastic drop shadows, no halftone dots, no neon glitch.",
+  "meta_prompt": "这是一张竖幅的印刷拼贴海报，画幅 3:4，气质干净利落，透着中式剪纸的克制感。主体是{主体群像}的剪纸剪影，以{基底色}为主色，成员层层交错，细节全靠白色负空间镂空来刻画，轮廓流畅，远看就像一张立得住的窗花。画面上下分层，上方是图像区，下方是暖白底的信息卡。\n\n图像区留暖白纸底（#FAF7F0），群像直接坐在纸上跳出来，不铺任何底色。群像里至多允许一个低饱和色相的小面积点缀，安静地待在成员之间，不抢视线。整个群像只许一个例外成员用{跳色}，面积不超过群像的十分之一，位置要么在边缘要么在角落，是整张图唯一高饱和的颜色，也是唯一的亮色。撕纸边至多一道，只用在需要分区或揭示底层的边缘，绝不洒满画面。\n\n色彩以{基底色}、暖白、{跳色}为主，点缀色的饱和度和面积都必须远低于{跳色}。纸面用皮宣质感，纤维纹理极轻。坚决避开微 3D、塑料投影、孔版网点、霓虹故障这些花哨效果。\n\n下方信息卡用粗无衬线字体，标题是「{标题}」，副题是「{副题}」，按主题来定，文案通俗易懂。画面中除标题与副题外不出现任何其他文字与标点。整体留白要大，呼吸感要够，至多一道撕边，不出现碎片字。标点只用逗号和句号。严禁印章、年号、平台名，也要避开多色剪纸、茶渍复古、剪贴簿和标题乱码。\n\n以下内容作为变量，每次可替换：\n主题：{高山仰止}（唯一必填，群像、基底色、例外成员、标题、副题都由主题推演）\n主体群像：{主体群像}（可从主题推演，如「花丛」「鱼群」「瓦屋群」）\n基底色：{基底色}（可从主题推演，须写 HEX，取主题的第一自然色）\n例外成员：{例外成员}（可从主题推演，默认=群像中语义最突出的一枚）\n跳色：{跳色}（可从主题推演，须写 HEX，默认=高饱和朱红 #C41E3A）\n标题：{标题}（可从主题推演，≤6 字）\n副题：{副题}（可从主题推演，≤10 字）",
+  "meta_prompt_usage": "主题为唯一必填；其余变量按 slot_filling 由主题推演，填好后整段作为出图 prompt 直接可用。",
+  "slot_filling": {
+    "主题": "唯一必填；群像、基底色、例外成员、跳色、标题、副题全部由主题推演",
+    "主体群像": "从主题推演一组可数成员（≥3 枚才能层层交错，如花丛、鱼群、瓦屋群、山峦群）；须可被剪纸剪影表达（轮廓清晰、负空间可镂空）",
+    "基底色": "主题的第一自然色，写 HEX；默认 Charcoal #30343A（墨黑剪纸）；若推演为彩色而非黑灰，六轴 mode 记 complementary_duotone 并随配方声明",
+    "例外成员": "群像中语义最突出的一枚，整枚用跳色；位置在边缘或角落",
+    "跳色": "写 HEX，默认高饱和朱红 #C41E3A；预算 ≤群像十分之一，是全图唯一高饱和亮色",
+    "低饱和点缀": "默认不加；若加，必须用基底色的低饱和浅阶（Mist），禁止引入新色相",
+    "标题": "≤6 字，通俗；只含逗号句号或无标点",
+    "副题": "≤10 字，通俗；只含逗号句号或无标点",
+    "画幅 3:4": "本技能 GenerateImage 直接支持，无需降档"
+  }
+}

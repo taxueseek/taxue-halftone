@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "style_id": "dot_dissolve",
+  "name": "点阵解构海报路",
+  "position": "复古丝网圆点阵：具象主体解构为点阵、颗粒与流动波纹，介于真实与抽象之间；内置元提示词模板，主题为唯一必填",
+  "signature": "成千上万排列有秩序的圆形网点构成主体，点径、密度、间距与透明度随明暗、轮廓、空间关系变化，从清晰具象形态逐渐解构为点阵、颗粒与流动波纹；粗体无衬线文字融入点阵场，标点极简。",
+  "six_axes": {
+    "ground": "ground_neutral_white",
+    "ink_role": {
+      "mode": "complementary_duotone",
+      "primary": {"role": "主墨（主色1）", "hex": "#63365F", "percent": [70, 85], "duty": "主体点阵结构、主标题"},
+      "accent": {"role": "辅墨（主色2）", "hex": "#C83232", "percent": [15, 30], "duty": "副标题、一个物件或一处叠印交叉"}
+    },
+    "boolean": "overprint",
+    "mechanism": "am_halftone",
+    "behavior": "dissipate",
+    "volume": "balanced"
+  },
+  "typography_bias": "现代海报粗体无衬线；中文主、英文辅，三档层级；标点极简（正文与标题仅逗号句号），层级靠字号、字距、留白建立；字实地不上网，靠字穿点阵、压疏部与图融合；英文标题仅字母与空格",
+  "subject_bias": "一个可识别具象主体占 40–70%，从清晰形态向点阵、颗粒、波纹解构；默认偏位非对称，选中央须字撞物破对称；遮标题 3 秒可辨",
+  "empty_paper": [30, 55],
+  "platform_bias": ["xiaohongshu_34", "douyin_916"],
+  "avoid": ["居中对称模板", "渐变冒充网点（无点模糊过渡）", "重复规则背景与廉价装饰", "装饰性标点与独立圆点、分隔线", "日期、年份、编号、网址、品牌标识", "第三色相", "全通道同角"],
+  "example_prompt": "Retro silkscreen art poster, 2:3 vertical: the subject deconstructs from a clear figurative form into thousands of orderly round AM halftone dots, dot size, density and spacing following tone, contour and depth, edges dissolving into dot matrix, grain and flowing ripples, never a smooth gradient. Aubergine #63365F primary dots 70-85% and Signal Red #C83232 accent plate 15-30% with one duty, plates 45/75 degrees, overprint deepens at one crossing, highlights knock out to clean white paper 30-55%. Subject off-center with designed negative space, solid bold grotesque sans type fused with the dot field, CN headline over the sparse dot zone, EN caps title and CN subline, hierarchy by size, tracking and whitespace only, punctuation limited to comma and period, no dates, no logos, no decorative symbols, no repeated pattern background.",
+  "meta_prompt": "一张精美的现代艺术海报，主题是【 】。画面采用复古丝网印刷与半色调网点印刷风格，主体图像由成千上万排列有秩序的圆形网点构成，网点的大小、密度、间距和透明度随图像的明暗、轮廓和空间关系自然变化。主体从清晰的具象形态逐渐解构为点阵、颗粒和流动的视觉波纹，形成介于真实与抽象之间的视觉幻象。\n\n整体采用【主色1】、【主色2】、【强调色】和纯粹的背景配色，具有海报、艺术画册和手工印刷的质感。\n\n构图为竖版艺术海报，比例 2:3。主体位于【中央/偏上/偏下/左侧/右侧】，周围保留经过设计的负空间。点阵随着【流动/旋转/爆发/聚拢/扩散/下沉/波浪/呼吸】的方向变化，形成有节奏的视觉运动。画面精致、克制、富有艺术性和设计感，不要重复的规则背景，不要廉价的装饰效果。\n\n加入经过精心排版的文字。主标题：“【中文主标题】”。英文标题：“【ENGLISH TITLE】”。副标题：“【中文副标题】”。文字采用现代海报风格的粗体无衬线字体，字距和行距经过设计，排版与点阵图像融为一体。中文文字清晰、准确、可读，英文作为辅助信息。\n\n文字系统保持极简。正文与标题只允许使用逗号和句号作为标点符号。禁止出现冒号、分号、问号、感叹号、引号、括号、书名号、顿号、斜杠、反斜杠、连字符、短横线、长横线、破折号、下划线及其他装饰性符号。禁止使用点号作为视觉装饰，禁止出现独立圆点、项目符号、横线分隔线或符号化装饰。英文标题只保留必要的英文字母与空格，不添加英文句点、连字符或其他符号。文字之间使用空格、字号、字距和留白建立层级，不使用横线或符号建立结构。\n\n主标题放在【位置】，副标题放在【位置】，信息文字放在【位置】。不加入日期、年份、编号、网址、品牌标识或多余信息。整体具有真实专业的海报完成度。",
+  "meta_prompt_usage": "主题为唯一必填；其余槽位按 slot_filling 自动填充，填好后整段作为出图 prompt 直接可用。",
+  "slot_filling": {
+    "主题【 】": "映射 subject.json 取一个可识别主体；从结构链里选最适合「具象→点阵」解构的一环",
+    "【主色1】": "按主题语义从 §2 起点色选主墨，写 HEX；默认 Aubergine #63365F",
+    "【主色2】": "选辅墨并指定一个职务（副标题、一个物件或一处叠印交叉）；两版加网角度差 ≥30°；默认 Signal Red #C83232",
+    "【强调色】": "默认填「主色1×主色2 的叠印深化色」，由 overprint 生成，不算第三支墨；如需独立点睛，用主墨 Mist 浅阶，禁止新增色相",
+    "【中央/偏上/偏下/左侧/右侧】": "默认偏上或偏侧（避居中模板）；选中央时主标题必须撞物或穿点阵破对称",
+    "【流动/旋转/爆发/聚拢/扩散/下沉/波浪/呼吸】": "默认「流动」；聚拢、下沉只作次要素支持解构主势，不另开第二势",
+    "【中文主标题】": "按用户语言发明 2–8 字，只含逗号与句号",
+    "【ENGLISH TITLE】": "主标题的英文呼应，全大写，仅字母与空格",
+    "【中文副标题】": "一行以内，标点仅逗号句号",
+    "【位置】×3": "主标题压点阵疏部或纸口袋；副标题贴主标题组；信息文字落边角，不与焦点事件争位",
+    "比例 2:3": "经本技能 GenerateImage 出图降为 3:4；用户自带生成器支持 2:3 时保留 2:3"
+  }
+}
