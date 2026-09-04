@@ -1,3 +1,9 @@
+<p align="center">
+
+![Taxue Halftone Poster: a print-feel image engine. Turn a phrase, a theme, or a photo into a print-feel poster or cover.](./assets/readme/hero.png)
+
+</p>
+
 <div align="center">
 
 [中文](./README.md) · **English**
@@ -13,6 +19,26 @@
 [![SKILL.md](https://img.shields.io/badge/Agent-SKILL.md-214f9b?style=flat-square&labelColor=333)](./SKILL.md)
 
 </div>
+
+<p align="center">
+  <a href="#examples">Examples</a> ·
+  <a href="#eleven-styles--one-variant">Styles</a> ·
+  <a href="#how-to-use">How to use</a> ·
+  <a href="#use-cases">Use cases</a> ·
+  <a href="#basic-rules">Basic rules</a> ·
+  <a href="#validation">Validation</a> ·
+  <a href="#changelog">Changelog</a>
+</p>
+
+## The taxue image series
+
+Part of the taxue image-generation series — pick the right engine:
+
+| Skill | One-liner | Repo |
+|---|---|---|
+| **Taxue Creative Style** (image style engine) | 14 families, 77 variants: render by style, refine prompts, write from scratch, remember preferences | [taxue-creative-style](https://github.com/taxueseek/taxue-creative-style) |
+| **Halftone Poster** (print-feel engine) | 11 styles + 1 variant: a phrase, theme, or photo becomes a print-feel cover | **You are here** · [taxue-halftone](https://github.com/taxueseek/taxue-halftone) |
+| **Solar Polaroid** (seasonal creation engine) | Solar terms, festivals, phenology phrases become memorable posters, paper archives, polaroids | [taxue-solar-polaroid](https://github.com/taxueseek/taxue-solar-polaroid) |
 
 This skill makes "print-feel" images: halftone dots, Riso, woodcut, cyanotype, aizome (indigo dyeing), photocopy aesthetics. It defaults to two colors (one dominant, one accent), or a single color on request. It decides the palette, layout, and typography for you, and outputs a complete reusable prompt.
 

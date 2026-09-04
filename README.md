@@ -1,3 +1,9 @@
+<p align="center">
+
+![踏雪半调海报：印刷质感引擎。把一句话、一个主题或一张照片，做成一张有印刷质感的封面。](./assets/readme/hero.png)
+
+</p>
+
 <div align="center">
 
 **中文** · [English](./README.en.md)
@@ -13,6 +19,26 @@
 [![SKILL.md](https://img.shields.io/badge/Agent-SKILL.md-214f9b?style=flat-square&labelColor=333)](./SKILL.md)
 
 </div>
+
+<p align="center">
+  <a href="#示例作品">示例作品</a> ·
+  <a href="#十一种风格">风格</a> ·
+  <a href="#怎么用">怎么用</a> ·
+  <a href="#适合做什么">适合做什么</a> ·
+  <a href="#基本规矩">基本规矩</a> ·
+  <a href="#工程校验">工程校验</a> ·
+  <a href="#更新记录">更新记录</a>
+</p>
+
+## 生图技能家族
+
+同属踏雪生图系列，先认门，再用对技能：
+
+| 技能 | 一句话 | 仓库 |
+|---|---|---|
+| **踏雪创意风格**（影像风格引擎） | 14 个家族、77 个变体：按风格出图、改提示词、从零写、记住偏好 | [taxue-creative-style](https://github.com/taxueseek/taxue-creative-style) |
+| **半调海报**（印刷质感引擎） | 11 种风格 + 1 个变体：一句话、一个主题或一张照片，做成印刷感封面 | **你在这里** · [taxue-halftone](https://github.com/taxueseek/taxue-halftone) |
+| **节气拍立得**（节气创作引擎） | 节气、节日、物候短句，推出有记忆点的海报、纸本档案与拍立得 | [taxue-solar-polaroid](https://github.com/taxueseek/taxue-solar-polaroid) |
 
 它做的是「印刷感」的图：半调网点、Riso 孔版、木刻、蓝晒、复印机那种质感。默认双色（一主一辅），也可以只用单色，具体怎么配色、字放哪，它都会配好，最后给出一份完整可复用的提示词。
 
