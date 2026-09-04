@@ -21,5 +21,61 @@
   "empty_paper": [25, 55],
   "platform_bias": ["xiaohongshu_34", "bilibili_169", "wechat_235"],
   "avoid": ["做旧", "泛黄", "米色怀旧默认", "钴蓝+陶土骑行夏日专用组合"],
-  "example_prompt": "Coarse AM halftone, one dominant object cropped at an edge, headline crossing the object, paper knockout highlights, Cobalt primary #2148B8 + Terracotta accent #C65F38, 45° main plate, overprint where they meet, open shadows."
+  "example_prompt": "Coarse AM halftone, one dominant object cropped at an edge, headline crossing the object, paper knockout highlights, Cobalt primary #2148B8 + Terracotta accent #C65F38, 45° main plate, overprint where they meet, open shadows.",
+  "meta_prompt": "一张{主题}的复古印刷海报，{颜色1}与{颜色2}双色调半色调网点（halftone）质感，主体是{图像描述}，采用粗体{字体类型}文字「{文案}」与图像层叠交错，丝网印刷质感，高对比度，平面设计感，编辑排版风格，无摄影感，直接展示文案，没有多余的标点符号，无日期跟年份。",
+  "meta_prompt_usage": "精炼经典版，七个槽位只填主题即可出图；颜色、主体、字体、文案按 slot_filling 自动填充或由用户直接指定。",
+  "slot_filling": {
+    "主题": "必填；决定主体、配色与文案的气质",
+    "颜色1": "主墨，默认 Cobalt #2148B8，可换 §2 起点色，写 HEX",
+    "颜色2": "辅墨，默认 Terracotta #C65F38，写 HEX",
+    "图像描述": "一个可识别主体，由主题推演",
+    "字体类型": "粗体，如高对比衬线、粗黑体、压缩无衬线",
+    "文案": "用户提供或按用户语言发明",
+    "纸色": "默认中性白 #FAFAF7（地面色，不算墨，可换暖白/浅米）"
+  },
+  "meta_prompt_variants": [
+    {
+      "id": "editorial_bilingual",
+      "name": "经典半调·中英双文案变体",
+      "when": "需要中英文文案同时可见（中文语境优先）时使用；与基准精炼模板的唯一差异是两组文案并列（英文短语 + 中文短语，语义对应非直译）",
+      "meta_prompt": "一张{主题}的复古印刷海报，{颜色1}与{颜色2}双色调半色调网点（halftone）质感，主体是{图像描述}，采用粗体{字体类型}文字「{英文文案}」与「{中文文案}」文案，图像层叠交错，丝网印刷质感，高对比度，平面设计感，编辑排版风格，无摄影感，直接展示文案，没有多余的标点符号，无日期跟年份。",
+      "slot_filling": {
+        "主题": "必填；如「深夜便利店」",
+        "颜色1": "主墨，默认 Cobalt #2148B8（钴蓝），写 HEX",
+        "颜色2": "辅墨，默认 Terracotta #C65F38（陶土橙），写 HEX",
+        "图像描述": "一个可识别主体，由主题推演",
+        "字体类型": "粗体，如高对比衬线、粗黑体、压缩无衬线",
+        "英文文案": "英文短语，如 still open",
+        "中文文案": "中文短语，与英文文案语义对应，如「营业中」"
+      },
+      "examples": [
+        {
+          "name": "深夜便利店",
+          "note": "用户原始参考填法；still open / 营业中 为语义双关对应",
+          "fills": {
+            "主题": "深夜便利店",
+            "颜色1": "钴蓝",
+            "颜色2": "陶土橙",
+            "图像描述": "亮着灯的街角便利店",
+            "字体类型": "黑体",
+            "英文文案": "still open",
+            "中文文案": "营业中"
+          }
+        },
+        {
+          "name": "马拉松",
+          "note": "运动员场景的具体化填法（凌晨跑者的升级版）；THE LAST KILOMETER / 最后一公里 沿用 still open / 营业中的双关结构（马拉松最后一公里 × 办事最后环节），可换信号红等运动感配色",
+          "fills": {
+            "主题": "马拉松",
+            "颜色1": "钴蓝",
+            "颜色2": "陶土橙",
+            "图像描述": "终点线前冲线的奔跑身影",
+            "字体类型": "黑体",
+            "英文文案": "THE LAST KILOMETER",
+            "中文文案": "最后一公里"
+          }
+        }
+      ]
+    }
+  ]
 }

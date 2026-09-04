@@ -1,10 +1,14 @@
 # 示例图集
 
-本目录存放由技能实际出图产出的示例海报，九种风格全部有覆盖（不完美印刷拼贴三张、点阵解构三张、其余风格各一张）；变体点阵剪纸暂无样张。
+本目录存放由技能实际出图产出的示例海报，十一种风格中十种有样张（不完美印刷拼贴三张、点阵解构三张、复古编辑五张含双语变体两张、蓝染两张、其余风格各一张）；变体点阵剪纸与经典致敬暂无样张。
 
 | 文件 | 场景 | 风格 |
 |---|---|---|
 | `example-midnight-store.jpg` | 深夜便利店 | 复古编辑（editorial） |
+| `example-break-limits.jpg` | 突破极限 | 复古编辑（editorial） |
+| `example-solitude.jpg` | SOLITUDE · 空旷 | 复古编辑（editorial） |
+| `example-still-open.jpg` | 营业中 · 深夜便利店 | 复古编辑·双语变体（editorial_bilingual） |
+| `example-last-kilometer.jpg` | 最后一公里 | 复古编辑·双语变体（editorial_bilingual） |
 | `example-herbarium.png` | 草本标本档案 | 标本档案（archival） |
 | `example-concert-hall.jpg` | 无声的秩序 · 摄影展 | 瑞士海报（swiss） |
 | `example-midnight-radio.png` | 午夜电台 | 胶片叠层（filmstack） |
@@ -17,6 +21,8 @@
 | `example-dot-dissolve-jellyfish.jpg` | 深海之灯 · 水母 | 点阵解构（dot_dissolve） |
 | `example-dot-dissolve-fenghuaxueyue.jpg` | 风花雪月 | 点阵解构（dot_dissolve） |
 | `example-paper-cut-group-sea-sky.jpg` | 海阔天空 | 中式剪纸（paper_cut_group） |
+| `example-aizome-near-far.jpg` | 咫尺天涯 | 蓝染（aizome） |
+| `example-aizome-blue-knight.jpg` | 蓝色骑士 · 极速抵达 | 蓝染（aizome） |
 
 - 图片来源：全部为技能出图产物，非外部素材
 - 版权：本目录内图片按 [ASSET-LICENSE.md](../ASSET-LICENSE.md) 单独管理，不随 MIT 分发

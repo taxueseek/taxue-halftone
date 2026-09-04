@@ -22,6 +22,15 @@
       "default": true
     },
     {
+      "id": "ground_pure_white",
+      "name": "数字纯白",
+      "hex": "#FFFFFF",
+      "role": "Ground",
+      "counts_as_ink": false,
+      "use_for": ["蓝染/蓝晒现代海报", "绝对均匀纯白数字平面", "不做旧"],
+      "default": false
+    },
+    {
       "id": "ground_cool_gray",
       "name": "冷灰",
       "hex": "#E9E9E5",

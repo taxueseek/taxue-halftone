@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "style_id": "aizome",
+  "name": "蓝染艺术海报路",
+  "position": "现代蓝染/蓝晒艺术海报：绝对纯白数字平面 + 深靛蓝/钴蓝双蓝 + 蓝晒平阶剪影，染液浓淡、版画排线只活在蓝色内部；主标题+副标题完整文字组随九方位变奏；内置元提示词模板，主题为唯一必填",
+  "signature": "绝对均匀纯白背景（RGB 255,255,255，无偏色无纸纹无做旧），深靛蓝与钴蓝两支蓝墨叠印出多次浸染的最深蓝；主体是蓝晒式 2-3 明度平阶剪影，浓淡如染液自然晕开而非网点，局部颗粒、短排线、轻微毛边只存在于蓝色图形内部；主标题以现代编辑感黑体/窄体/几何字体与副标题构成完整文字组，随九方位变奏嵌入留白。",
+  "six_axes": {
+    "ground": "ground_pure_white",
+    "ink_role": {
+      "mode": "overprint_duotone",
+      "primary": {"role": "主墨（深靛蓝）", "hex": "#1E3A64", "percent": [70, 85], "duty": "主体蓝阶剪影、主标题、染液浓淡主体"},
+      "accent": {"role": "辅墨（钴蓝）", "hex": "#2148B8", "percent": [15, 30], "duty": "副标题、一个局部物件或一处叠印交叉（多次浸染的最深蓝由 overprint 生成）"}
+    },
+    "boolean": "overprint",
+    "mechanism": "photogram_stencil",
+    "behavior": "dissipate",
+    "volume": "balanced"
+  },
+  "typography_bias": "现代编辑感中文黑体/窄体/几何字体；主标题≤8 字可 type-in（按 §4.5 选一谱系+≥3 特征），复杂或超长则 type-off 后期上字；主标题+副标题构成一个完整文字组，除这两组外零文字零标点（标点仅逗号句号）；标题支持中英混合且须准确呈现，按字形与语义自适应排版；副标题不与主标题重复；禁英文注释、日期、编号、下划线、标签框、水印",
+  "subject_bias": "一个可识别主体（专属视觉隐喻：主体通过动作与主题物件构成的环境发生关系），占 45-65%；主体可近景/远景/局部特写/微小/巨大/群体叙事，可从任意边缘进入、局部切出画框、包围文字或与文字穿插；禁无关花卉、通用人物、素材图标、纯装饰物；遮标题 3 秒可辨；白色区域保持绝对干净",
+  "empty_paper": [35, 55],
+  "platform_bias": ["xiaohongshu_34"],
+  "avoid": ["左上标题右下插画默认结构", "居中对称模板", "渐变冒充染液浓淡（须平阶+浓淡有结构）", "自动做旧（纸纹布纹颗粒污渍阴影折痕暗角）", "背景偏黄偏灰（必须 #FFFFFF）", "独立悬浮线条（横竖斜线/分隔线/下划线/边框/裁切线/速度线/贯穿留白长直线）", "文字系统外的任何文字（英文注释/日期/编号/水印/签名/乱码）", "无关花卉通用人物素材图标", "点缀色超 5% 或进主体结构", "第三色相（除指定点缀色）", "复刻上一张版式骨架"],
+  "example_prompt": "Vertical 3:4 modern aizome (indigo dyeing) art poster on an absolutely uniform pure white digital plane, background #FFFFFF, no tint, no gradient, no paper or cloth grain, no stains, no shadows, no creases, no vignette, no aging marks. Single exclusive visual metaphor: a lone night boat (subject) parts the dark tide (action) among drifting lantern-shadow eddies (theme environment), meaning: light is the shore. Illustration fuses aizome, cyanotype, silkscreen and woodblock print language: the boat and currents rendered as 2-3 flat indigo values of hard photogram-like silhouette, tonal depth from natural dye saturation rather than halftone dots; gentle dye speckle, short local hatch lines and slight soft edges live only inside the blue shapes; the white area stays absolutely clean. Deep indigo #1E3A64 carries the subject and CN headline, cobalt #2148B8 carries the subline and one overprint crossing where the two inks deepen into the darkest indigo of repeated dipping. Pure white negative space 35-55% with one main visual center and one supporting center; hierarchy by size, density, blue area and detail density, never by rules, borders or dividers. Modern editorial geometric sans CN headline \"夜航\" placed upper right over the sparse white pocket, subline \"灯亮着的地方就是岸\" grouped with it as one text block; only these two text groups exist, no other characters, no English notes, no dates, no logos, no signatures, no watermark; punctuation limited to comma and period. No floating horizontal, vertical, diagonal lines, no rules, no underlines, no frames, no cutting guides; every line belongs to a recognizable object (the boat hull, the swells, the oar). Refined, restrained, collectible-poster quality; do not reuse the layout skeleton of any previous piece.",
+  "meta_prompt": "一张竖版 3:4（或 2:3）的现代蓝染艺术海报。背景是绝对均匀的纯白色数字平面，红、绿、蓝数值均为 255（#FFFFFF），不得偏黄、偏灰，不得出现渐变、纸纹、布纹、颗粒、污渍、阴影、折痕、暗角和做旧痕迹；背景不是纸张、布料、墙面或摄影环境。\n\n# 一、内部重新规划（不展示过程）\n生成前，先在内部重新规划本张海报的版式，但不要展示规划过程。将画面想象成九个方位（左上/上中/右上/左中/正中/右中/左下/下中/右下），从中分别选择标题位置、主体重心和辅助视觉位置；三个位置不得重合，也不得连续两次采用相同组合，九个方位被选择的机会应尽量均等，不得默认把标题放在左上角。同时重新决定：标题排列方向（横排/竖排/错落叠排/上下分置/嵌入留白/沿主体轮廓排列）、画面视觉动势（上升/下降/环绕/聚拢/扩散/左右流动/上下流动）、图文关系（对望/包围/嵌合/穿插/承接/尺度反差）、主体尺度（近景/远景/局部特写/微小主体/巨大主体/群体叙事）、留白形状（弧形/楔形/岛状/包围状/不规则块状/开放式）。每次至少改变其中四项，不得连续使用相同的标题位置、文字方向、主体重心、图文关系和留白形状，避免最常见的「左上标题、右下插画」结构。\n\n# 二、主题与隐喻\n主题：「{主题}」；核心表达：「{核心表达}」；整体情绪：「{情绪}」。先重新定义这个主题真正要表达的问题，再从第一性原理提炼一个核心矛盾，将其转化为「主体以某种动作作用于主题环境」的专属视觉隐喻：让{主体}通过{动作}与{环境}发生关系，以清楚表达核心概念。主体、动作、道具和环境必须只服务于主题，不使用无关花卉、通用人物、素材化图标或纯装饰物填充画面。\n\n# 三、颜色\n画面只使用四组颜色：绝对纯白背景（#FFFFFF）、深靛蓝（#1E3A64，主墨，承担主体结构与主标题，占画面蓝色面积 70-85%）、钴蓝（#2148B8，辅墨，承担副标题、一个局部物件或一处叠印交叉，占 15-30%）、两蓝相交处的叠印深蓝（多次浸染的最深蓝，只由 overprint 生成，不算第三色相）。点缀色：「{点缀色}」——默认不使用；若指定一种颜色，总面积不超过画面的 5%，只作为一处局部记号出现，不得进入主体结构。所有印染颗粒、浓淡变化和手工质感只能存在于蓝色文字与蓝色图形内部，不得进入白色背景。\n\n# 四、插画语言\n插画融合蓝染、蓝晒、丝网印刷和版画语言：主体处理为 2-3 个明度的蓝阶剪影（蓝晒 photogram 式平阶结构，不用半调网点），明度变化表现为染液的自然浓淡；蓝色区域可有自然的染料浓淡、局部颗粒、短小排线和轻微毛边，颗粒与排线短小、局部并完全包含在蓝色图形轮廓内；白色区域必须保持绝对干净。\n\n# 五、构图\n纯白留白占画面约 35% 至 55%。只设置一个主要视觉中心和一个辅助视觉中心，通过大小、疏密、蓝色面积和细节密度建立层级。不得依赖横线、边框和分隔符组织版面。主体可以从任意边缘进入、局部切出画框、包围文字或与文字穿插，但必须保持视觉平衡和阅读清晰。\n\n# 六、文字\n画面只能出现以下两组文字。主标题：「{主标题}」。副标题：「{副标题}」。主标题使用具有现代编辑感的中文黑体、窄体或几何字体，标题位置服从本次隐式变奏结果，不得默认左对齐或固定在左上角；副标题必须与主标题构成一个完整文字组，不得散落到无关位置。除指定标题外，不得出现任何其他汉字、拼音、英文字母、外语、数字编号、伪文字、乱码、签名、商标或水印；标题支持中文、英文或中英混合，中英混合时须准确呈现并按字形与语义自适应排版。标点只允许逗号和句号；文字周围不得增加英文注释、装饰小字、日期、编号、下划线、标签框或无意义符号；主标题与副标题直接展示，没有多余的标点符号。\n\n# 七、线条限制\n不得出现独立悬浮的横线、竖线、斜线、分隔线、下划线、边框线、辅助线、裁切线、速度线和贯穿留白的长直线。所有线条必须明确属于具体物体的轮廓或内部结构，版画排线必须短小、局部并完全包含在物体轮廓内。如果主题需要绳索、道路、缝线或轨迹，必须画出清楚的起点、终点和自然弯曲，使其成为可识别的主题物件，不能表现成抽象分隔线。\n\n# 八、消融与验收\n完成后逐项进行消融：删除某元素若不损害主题识别、叙事、情绪或层级，则永久删除；作用重复者只留最佳。最终做到 3 秒感知主题、10 秒理解隐喻，画面精炼、独特、准确，富有主题叙事和收藏级海报感；不得照搬上一张作品的版式骨架。\n\n以下内容作为变量，每次可替换：\n主题：{主题}（唯一必填，支持中文、英文或中英混合）\n核心表达：{核心表达}（可留空；留空时用一句通俗的话解释主题）\n主标题：{主标题}（可留空；留空时自动创作，简短、有记忆点）\n副标题：{副标题}（可留空；留空时自动创作，补充洞察而不重复主标题）\n情绪：{情绪}（填写，如沉静/辽阔/孤独/克制/澎湃）\n点缀色：{点缀色}（默认「不使用」；也可填一种颜色，≤5%、一处局部、不进主体结构）\n主体：{主体}（由主题推演的专属隐喻主体）\n动作：{动作}（主体作用于环境的动作）\n环境：{环境}（主题物件构成的环境，隐喻发生所在的场所，如灯影、滩涂、群山、晾布架）",
+  "meta_prompt_usage": "主题为唯一必填；核心表达、主标题、副标题、情绪、点缀色可由用户提供或留空自动填充/自动创作；主体、动作、环境由主题推演。模板融合两份蓝染元提示词：结构化槽位版（§一至§七）+ 第一性原理流程版（§二重定义问题、§八消融与验收），填好后整段作为出图 prompt 直接可用。",
+  "slot_filling": {
+    "主题": "唯一必填；支持中文/英文/中英混合；主体、动作、环境、颜色、标题、情绪全部由主题推演",
+    "核心表达": "可留空；留空时用一句通俗的话解释主题（如「时间退去，留下来的才是岸」）",
+    "主标题": "可留空；留空自动创作 2–8 字，简短、有记忆点；中英混合须准确呈现；≤8 字可 type-in（按 §4.5 选谱系+≥3 特征），复杂或超长则 type-off 后期上字",
+    "副标题": "可留空；留空自动创作，补充洞察而不重复主标题；与主标题构成一个完整文字组，不散落",
+    "情绪": "填写一个词，指导浓淡与动势（沉静/辽阔/孤独/克制/澎湃等）；禁止被情绪词替代机制痕迹",
+    "点缀色": "默认「不使用」；若指定一种颜色：≤5%、只作一处局部记号、不进主体结构，六轴不新增墨层（按 Mist/叠印示意，不单立第三色相）",
+    "主体": "由主题推演的可识别主体（非通用人像/花卉/图标）；近景/远景/局部特写/微小/巨大/群体叙事任选，与标题位、重心、留白组合变奏",
+    "动作": "主体对环境的动作（如逆流、铺开、托举、退让），是隐喻的核心动词",
+    "环境": "主题物件构成的环境，如灯影、滩涂、群山、晾布架；禁抽象装饰背景",
+    "变奏组合": "九方位三位置不重合、不与上一张相同组合、至少改四项；标题不默认左上，禁「左上标题、右下插画」结构",
+    "画幅 3:4 或 2:3": "本技能 GenerateImage 出图统一为 3:4；用户自带生成器支持 2:3 时保留 2:3"
+  }
+}

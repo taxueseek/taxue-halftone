@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "style_id": "tribute",
+  "name": "经典致敬路",
+  "position": "以任意风格/流派/名画/年代美学为视觉母题，抽象转译构图母题、视觉动机与情绪氛围；纪念碑式巨大粗体英文标题 × 极小形象的现代概念海报；内置元提示词模板，风格来源与主题为必填",
+  "signature": "巨大利落粗体英文主标题是画面主体，下方一个极小可辨识形象构成纪念碑式尺度反差，上半大片克制留白；中文短句为主、英文短句更小字号呼应；排版、字体、配色、材质与时代气质跟随视觉来源适度调整，但不复刻来源的任何可辨认画面；双色、叠印加深、未涂布纸、平版印刷、细 AM 半调、轻微褪色油墨与轻微错版，克制安静有力量。",
+  "six_axes": {
+    "ground": "ground_warm_white",
+    "ink_role": {
+      "mode": "overprint_duotone",
+      "primary": {"role": "主墨（视觉来源主调或沉稳深墨）", "hex": "#30343A", "percent": [70, 85], "duty": "巨大粗体标题、极小形象结构、主要排线"},
+      "accent": {"role": "辅墨（视觉来源呼应色）", "hex": "#C65F38", "percent": [15, 30], "duty": "一处呼应色块/一个图形/一处叠印交叉，随视觉来源调整"}
+    },
+    "boolean": "overprint",
+    "mechanism": "am_halftone",
+    "behavior": "still",
+    "volume": "type_lead"
+  },
+  "typography_bias": "巨型粗体无衬线或衬线标题（随视觉来源调整字体性格），是画面唯一爆炸性元素；中文短句为主（语义主句），英文短句更小字号呼应，两者同时清晰出现、语义呼应而非逐字直译；除标题组与短句组外零文字零装饰文字；层级靠字号、字距、留白，禁日期编号水印",
+  "subject_bias": "一个极小的可辨识形象（与巨标题形成鲜明尺度反差），位于下方或边缘；简洁、安静、不抢标题；由主题推演，禁无关装饰物；来源转译只取母题、动机与氛围，不复刻可辨认画面",
+  "empty_paper": [40, 60],
+  "platform_bias": ["xiaohongshu_34"],
+  "avoid": ["复刻名画可辨认画面", "风格冲突堆砌", "居中对称模板", "摄影感", "无关文字与装饰小字", "日期年份编号", "QR 码水印 logo 样机社交叠层", "荧光色多色相", "素材化图标"],
+  "example_prompt": "Modern concept poster inspired by Bauhaus era aesthetics, centered on the theme of order. Layout, type, palette, material and period mood follow the Bauhaus source as an abstract translation of its compositional motifs, visual motives and emotional atmosphere — never reproducing any recognizable Bauhaus artwork. The picture subject is a huge bold geometric sans-serif English headline \"ORDER\" forming a monumental scale contrast with a tiny image of a single paper plane below, upper half stays a large empty field. Chinese line 「秩序是沉默的建筑」 carries the meaning, English line \"Silence builds order\" echoes it in smaller type, both clearly visible, semantic echo not literal translation. Duotone overprint deepens, uncoated warm-white paper, lithographic fine AM halftone, slightly faded ink and one slight misregistration, restrained, quiet and strong. No photographic feel, no extraneous text, no QR code, no watermark, no logo, no mockup, no social overlays.",
+  "meta_prompt": "一张由{风格来源}启发、以{主题}为核心的现代概念海报。{风格来源}可以是世界名画、艺术流派、年代美学或任意视觉风格；若源自具体作品则根据参考图，不复刻其任何可辨认画面，仅抽象转译其构图母题、视觉动机与情绪氛围。画面主体是一个基于主题的巨大粗体标题「{英文主标题}」，与下方一个极小的{极小形象}形成纪念碑式尺度反差；上半保留大面积留白。中文「{中文短句}」为主，英文“{英文短句}”以更小字号呼应，两者必须同时清晰出现，语义呼应而非逐字直译。整体排版、字体、配色、材质与时代气质跟随{风格来源}适度调整，避免风格冲突，同时保留现代编辑设计感、清晰层级、强烈尺度反差与克制留白。默认采用双色调、叠印加深、未涂布纸、平版印刷、细 AM 半调网点、轻微褪色油墨与轻微错版；若与指定风格不符，可进行量身定做更巧妙的视觉效果，不机械套用。克制、安静而有力量。无摄影感，直接展示文案，没有多余的标点符号，无无关文字，无 QR 码、水印、logo、样机及社交媒体叠层。\n\n以下内容作为变量，每次可替换：\n风格来源：{风格来源}（唯一必填，世界名画/艺术流派/年代美学/任意视觉风格）\n主题：{主题}（唯一必填，决定标题词与极小形象）\n英文主标题：{英文主标题}（巨大粗体，基于主题的词组，全大写）\n极小形象：{极小形象}（一个可辨识的微小元素，与巨标题尺度反差）\n中文短句：{中文短句}（语义主句，为主）\n英文短句：{英文短句}（更小字号呼应，语义呼应而非直译）",
+  "meta_prompt_usage": "风格来源与主题为唯一必填；英文主标题、极小形象、中文短句、英文短句可留空自动创作（语义呼应、非逐字直译）；风格来源为具体作品时用户可附参考图，仅作母题转译；填好后整段作为出图 prompt 直接可用。",
+  "slot_filling": {
+    "风格来源": "唯一必填；世界名画/艺术流派/年代美学/任意视觉风格；源自具体作品时按参考图转译母题、动机、氛围，禁复刻可辨认画面；默认印刷配置与其冲突时按模板原文「量身定做更巧妙的视觉效果」处理，不机械套用",
+    "主题": "唯一必填；决定英文主标题的词义与极小形象；禁与风格来源无关的装饰性拼凑",
+    "英文主标题": "可留空；基于主题的词组，全大写，2–4 词内，作为画面唯一爆炸性元素；type-in 时按 §4.5 选谱系+≥3 特征",
+    "极小形象": "可留空；填物品名词（模板自带「一个极小的」前缀，如「纸飞机」「烛火」「一粒种子」），由主题推演；简洁安静，与巨标题形成 10×+ 直观尺度反差，不抢标题",
+    "中文短句": "可留空；语义主句（为主），一句话内的短句；与英文主标题、英文短句语义呼应而非逐字直译",
+    "英文短句": "可留空；更小字号，呼应中文短句；三组文字层级清晰，禁第四组文字",
+    "配色/材质/气质": "默认 Charcoal #30343A + Terracotta #C65F38、未涂布暖白纸、平版细 AM 半调、轻度褪色与一次错版；随风格来源调整时保持 ≤2 墨 + 叠印布尔不变",
+    "画幅": "默认 3:4（本环境 GenerateImage）"
+  }
+}

@@ -167,6 +167,40 @@
         "empty_paper_range": [40, 65],
         "tonal_gate": "can name the main plate at 45 degrees, the jump plate offset ≥30 degrees, and where paper shows; interiors are dots never flat fill, no 100% solids, one 1mm misregistration as natural press error"
       }
+    },
+    {
+      "id": 11,
+      "style": "aizome",
+      "prompt": "用蓝染做一张竖版艺术海报，主题是「守夜人」，主标题「守夜」，副标题「灯亮着的地方就是岸」。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "photogram_stencil",
+        "ground": "ground_pure_white",
+        "mode": "overprint_duotone",
+        "ink_hexes": ["#1E3A64", "#2148B8"],
+        "theme_roles": ["primary: subject indigo flat-value silhouette + CN headline", "accent: subline, one local object or one overprint crossing; deepest indigo from overprint, not a third ink"],
+        "volume": "balanced",
+        "behavior": "dissipate",
+        "empty_paper_range": [35, 55],
+        "tonal_gate": "can name the pure white #FFFFFF plane, the two indigo/cobalt plates, the overprint deepest indigo, and where the white shows; dye tonal depth is flat values never halftone dots, dye speckle and hatch live only inside blue shapes, no aging, no floating lines, only headline+subline text"
+      }
+    },
+    {
+      "id": 12,
+      "style": "tribute",
+      "prompt": "用经典致敬做一张概念海报，风格来源是包豪斯年代美学，主题是「秩序」。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "am_halftone",
+        "ground": "ground_warm_white",
+        "mode": "overprint_duotone",
+        "ink_hexes": ["#30343A", "#C65F38"],
+        "theme_roles": ["primary: monumental bold headline + tiny subject structure", "accent: one echo block / one graphic / one overprint crossing, tuned to the visual source"],
+        "volume": "type_lead",
+        "behavior": "still",
+        "empty_paper_range": [40, 60],
+        "tonal_gate": "can name the monumental headline vs tiny subject scale contrast, the large upper emptiness, the duotone overprint deepening on uncoated paper, the fine AM halftone with slight fade and one misregistration; source translated as motif not reproduced; Chinese line carries meaning, English echo smaller, no extra text, no QR/watermark/logo/mockup"
+      }
     }
   ]
 }
