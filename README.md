@@ -12,7 +12,7 @@
 
 **把一句话、一个主题或一张照片，做成一张有印刷质感的封面。**
 
-[![Version](https://img.shields.io/badge/VERSION-1.4.1-2ea44f?style=flat-square&labelColor=333)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/VERSION-1.4.2-2ea44f?style=flat-square&labelColor=333)](./CHANGELOG.md)
 [![Skills](https://img.shields.io/badge/SKILLS-1-2ea44f?style=flat-square&labelColor=333)](./SKILL.md)
 [![Stars](https://img.shields.io/github/stars/taxueseek/taxue-halftone?style=flat-square&label=STARS&color=e37f2c&labelColor=333)](https://github.com/taxueseek/taxue-halftone/stargazers)
 [![Validate](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml/badge.svg)](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml)
@@ -44,7 +44,7 @@
 
 ## 示例作品
 
-> 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。十一种风格中十种有示例图：不完美印刷拼贴与点阵解构各有三张，复古编辑五张（含双语变体两张），蓝染两张，其余风格各一张；变体点阵剪纸与经典致敬暂无样张。
+> 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。十二种风格与两个变体中十个有示例图：不完美印刷拼贴与点阵解构各有三张，复古编辑五张（含双语变体两张），蓝染两张，其余风格各一张；经典致敬、波普波点与两种变体（点阵剪纸、物影蓝晒）暂无样张。
 
 | 深夜便利店（复古编辑） | 标本档案（标本档案） | 无声的秩序（瑞士海报） |
 |:---:|:---:|:---:|
@@ -74,7 +74,7 @@
 |:---:|:---:|:---:|
 | <img src="./examples/example-aizome-blue-knight.jpg" alt="靛蓝蓝染蓝色骑士极速抵达海报" width="280"> |  |  |
 
-## 十一种风格 + 一个变体
+## 十二种风格 + 两个变体
 
 | 风格 | 色卡 | 特点 |
 |---|---|---|
@@ -89,7 +89,9 @@
 | **中式剪纸**（paper_cut_group） | ![paper_cut_group](./swatches/paper_cut_group.svg) | 墨黑 + 朱红，剪纸剪影层层交错，细节靠白色负空间镂空，一枚跳色例外成员，上图下卡，内置元提示词模板（只输入主题即可出图） |
 | **点阵剪纸**（paper_cut_halftone，变体） | ![paper_cut_halftone](./swatches/paper_cut_halftone.svg) | 主色 + 纸色 + 克制跳色，点阵解构与中式剪纸的混搭——剪纸窗花轮廓配粗圆网点铺形，暗部不断网，用色倾向三选一，上图下卡，内置元提示词模板（主题唯一必填） |
 | **蓝染**（aizome） | ![aizome](./swatches/aizome.svg) | 绝对纯白数字平面 + 深靛蓝 + 钴蓝，蓝晒式平阶剪影，染液浓淡与版画排线只在蓝色内部，主标题副标题随九方位变奏，内置元提示词模板（只输入主题即可出图） |
+| **物影蓝晒**（aizome_photogram，变体） | ![aizome_photogram](./swatches/aizome_photogram.svg) | 反俗套蓝染：蓝底白形的蓝晒物影，现代潮流物件（滑板/耳机/球鞋）平放曝光留白，水洗晕染只在蓝区，展柜气质，内置元提示词模板（物件必填） |
 | **经典致敬**（tribute） | ![tribute](./swatches/tribute.svg) | 任意名画/艺术流派/年代美学为母题，巨大粗体英文标题 × 极小形象的纪念碑式反差，抽象转译不复刻可辨认画面，中文为主英文呼应，内置元提示词模板（风格来源 + 主题必填） |
+| **波普波点**（polka） | ![polka](./swatches/polka.svg) | 同一种视觉单元（实心圆点/细弧网/镜面延展）全幅连续生成，单元吞没主体、无中心无焦点，≤3 色 HEX、丙烯珐琅平涂，内置精炼元提示词模板（主体必填，机制三选一，附 6 条自检清单） |
 
 想用哪个风格，直接点名；不说风格它会按主题和用途选。
 
@@ -136,7 +138,7 @@ npx skills add taxueseek/taxue-halftone
 
 ## 工程校验
 
-规范不只写在文档里：十一种风格与变体的取值、配色、机制都有机器可读的清单，配有评测用例。改任何一处，跑一遍检查就能发现有没有改坏，push 或提 PR 时 GitHub Actions 会自动跑。
+规范不只写在文档里：十二种风格与变体的取值、配色、机制都有机器可读的清单，配有评测用例。改任何一处，跑一遍检查就能发现有没有改坏，push 或提 PR 时 GitHub Actions 会自动跑。
 
 ```bash
 scripts/run_tests.sh                    # 一次跑完所有检查
@@ -146,11 +148,13 @@ scripts/render_style_card.py <style_id> # 重新生成色卡图
 
 ## 更新记录
 
+- **v1.4.2**（2026-09-05）：全部风格名统一为自然语言「XX风格」（style_id 不变），「快速路」表述改为「精简流程」，色卡全部重渲；波普波点（polka，新机制 polka_field + 新行为 field）与物影蓝晒（aizome_photogram，蓝染变体）首次进入发布线（1.4.0 时已开发、未随 1.2.0–1.4.1 发布）；真源与发布仓内容对齐，评测用例补到第 14 条。详见 [CHANGELOG.md](./CHANGELOG.md)。
+
 - **v1.4.1**（2026-09-04）：示例图集扩充——新增六张实测样张：突破极限、最后一公里（复古编辑·双语变体）、营业中（复古编辑·双语变体）、SOLITUDE（复古编辑）、咫尺天涯与蓝色骑士（蓝染），蓝染风格补齐样张；全部样张剥离生成元数据（EXIF 追踪字段与 AI 标识），只保留像素。
-- **v1.4.0**（2026-09-04）：文案标点硬约束全面落地；editorial 内置精炼元提示词模板（经典半调，只输入主题即可出图）+ 中英双文案变体（still open / 营业中）；新增第十套风格 aizome（蓝染艺术海报路）与第十一套风格 tribute（经典致敬路），设计系统新增 ground_pure_white（数字纯白）；评测用例补到第 11 条。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.4.0**（2026-09-04）：文案标点硬约束全面落地；editorial 内置精炼元提示词模板（经典半调，只输入主题即可出图）+ 中英双文案变体（still open / 营业中）；新增第十套风格 aizome（蓝染艺术海报风格）与第十一套风格 tribute（经典致敬风格），设计系统新增 ground_pure_white（数字纯白）；评测用例补到第 11 条。详见 [CHANGELOG.md](./CHANGELOG.md)。
 - **v1.3.0**（2026-09-03）：参考创作模式（§1.6），用户提供参考图时先判角色——同指纹则锁定对应风格六轴为起点，机制迁移走 2–4 个可见机制 + 掏空判定。详见 [CHANGELOG.md](./CHANGELOG.md)。
 - **v1.2.0**（2026-09-03）：图源输入诊断（§1.5）——照片先写五行诊断卡再按特征映射表取六轴值；四域命题落账设计判断；中文展示字形速查（§4.5）6 谱系；消融工具 ablate.py / checker.py。详见 [CHANGELOG.md](./CHANGELOG.md)。
-- **v1.1.0**（2026-09-03）：新增第七至第九套风格 imperfect_collage（不完美印刷拼贴）、dot_dissolve（点阵解构海报路）、paper_cut_group（中式剪纸路）与第七种印刷机制 paper_cut_collage（剪纸拼贴），均内置元提示词模板；另新增变体 paper_cut_halftone（点阵剪纸路——点阵解构与中式剪纸的混搭）；补四张实测样张（雾中灯塔、深海之灯、风花雪月、海阔天空，其中海阔天空为中式剪纸样张）；新增「随机性与创造力」说明与生图模型建议；风格更名——中式剪纸群像→中式剪纸、网点剪纸群像→点阵剪纸（定性为变体），style_id 不变。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.1.0**（2026-09-03）：新增第七至第九套风格 imperfect_collage（不完美印刷拼贴）、dot_dissolve（点阵解构海报风格）、paper_cut_group（中式剪纸风格）与第七种印刷机制 paper_cut_collage（剪纸拼贴），均内置元提示词模板；另新增变体 paper_cut_halftone（点阵剪纸风格——点阵解构与中式剪纸的混搭）；补四张实测样张（雾中灯塔、深海之灯、风花雪月、海阔天空，其中海阔天空为中式剪纸样张）；新增「随机性与创造力」说明与生图模型建议；风格更名——中式剪纸群像→中式剪纸、网点剪纸群像→点阵剪纸（定性为变体），style_id 不变。详见 [CHANGELOG.md](./CHANGELOG.md)。
 - **v1.0.0**（2026-09-01）：首次发布。六种风格、六种印刷质感、机器校验和评测用例。详见 [CHANGELOG.md](./CHANGELOG.md)。
 
 ## License

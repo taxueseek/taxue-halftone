@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "style_id": "polka",
+  "name": "波普波点风格",
+  "position": "波普单元场：同一种视觉单元（实心圆点/细弧网/镜面延展）全幅连续生成，无中心、无焦点，单元吞没主体并漫出边缘，图案主体背景共享同一套视觉语法；内置精炼元提示词模板，主题与主体必填，机制三选一",
+  "signature": "整张海报由同一种视觉单元持续生成：单元是图像的基本构成单位而非装饰，铺满画面、消解传统视觉中心；主体表面被单元完整吞没、边界持续消融，个体融入环境形成流动共鸣的视觉隐喻；极简构图、强图形性，像经过精确设计的艺术展览海报；≤3 色（底色/主色/点色）明确 HEX，丙烯或珐琅厚实平涂质感，圆点边缘锐利。",
+  "six_axes": {
+    "ground": "ground_neutral_white",
+    "ink_role": {
+      "mode": "complementary_duotone",
+      "primary": {
+        "role": "主色（主体与大面积）",
+        "hex": "#30343A",
+        "percent": [
+          70,
+          85
+        ],
+        "duty": "主体结构、大面积色底、主要单元密度"
+      },
+      "accent": {
+        "role": "点色（单元色）",
+        "hex": "#C83232",
+        "percent": [
+          15,
+          30
+        ],
+        "duty": "波点/细网/镜面单元、一句文案"
+      }
+    },
+    "boolean": "knockout",
+    "mechanism": "polka_field",
+    "behavior": "field",
+    "volume": "image_lead"
+  },
+  "typography_bias": "一句简练、通俗、有隐喻性的短文案，服务于概念不抢图形主体；简洁现代平面字体，与波点系统共享视觉语言；文案直接展示，没有多余的标点符号；无年份日期",
+  "subject_bias": "物形高度简化，保留最具识别度的轮廓与结构；主体表面必须被单元完整吞没，禁大块光滑素面；主体可居中或偏中但不得成为孤立主体，单元必须爬上主体、穿过主体并漫出边缘",
+  "empty_paper": [
+    5,
+    20
+  ],
+  "platform_bias": [
+    "xiaohongshu_34"
+  ],
+  "avoid": [
+    "任何在世艺术家姓名",
+    "稀疏装饰点",
+    "可爱贴纸风",
+    "卡通贴纸感",
+    "写实毛孔",
+    "复杂街景",
+    "五彩乱点",
+    "撕纸拼贴",
+    "照片式景深",
+    "过度渐变",
+    "孤立主体",
+    "传统中心构图",
+    "灰雾渐变金属霓虹",
+    "水彩湿晕摄影颗粒真实照片纹理",
+    "年份日期",
+    "第三色相"
+  ],
+  "example_prompt": "Vertical 3:4 art-exhibition poster with pop-art dot-field: one repeating visual unit (solid round dots in 2-3 sizes only, same family, same shape, same color, extremely dense with almost no gaps) covers subject and environment, the subject silhouette simplified but recognizable and fully swallowed by the unit field, unit climbing over and spilling past its edges, no visual center, no photographic focus, foreground subject and background share one visual syntax. Colors ≤3 with explicit HEX: ground neutral white #FAFAF7, primary deep charcoal #30343A for the subject and large areas, accent signal red #C83232 for the dots and one short line of copy; hard-edge flat fill like acrylic or enamel, crisp circle edges, print-clean shapes, no wet watercolor, no photo grain, no gradients, no metallic or neon. One concise metaphorical line of copy「{文案}」in a clean modern flat typeface sharing the visual language of the dot system. No real artist names, no dates, no years.",
+  "meta_prompt": "一张{主题}的艺术展览海报，风格核心是「波点」：波点是图像的基本构成单位，不是装饰元素。整张海报由同一种视觉单元持续生成，单元铺满画面并消解传统视觉中心；图案、主体、背景共享同一套视觉语法，个体逐渐融入环境，形成流动、共鸣、边界模糊的视觉隐喻；极简构图，强图形性，像一张经过精确设计的艺术展览海报。\n\n背景图形：由主题的中文首字或英文首字母构成一个可辨认的图形（如「庄」或 Z），图形内部由波点、细网等单元组成，与主体共享同一套视觉语法，不做过度艺术化变形到不可辨认。主体：{主体}。物形高度简化，保留最具识别度的轮廓与结构；主体表面必须被机制完整吞没，不允许出现大块光滑素面。机制：{机制}——波点消融：实心圆点覆盖主体与环境，仅 2–3 级大小，同族、同形、同色，密度极高、空隙极少，单元沿主体轮廓、内部结构与背景连续分布并自然漫出主体边缘；无限细网：无数细小弧线连续连接，形成无中心的手绘网状结构，远看色雾与整体形态，近看可辨认重复的线性单元；镜屋延展：同一单元在镜面空间中不断反射延展，产生近乎无限的空间回响，保持图形清晰，禁止模糊成噪点。\n\n颜色严格三种以内并明确写 HEX：底色 {底色 HEX}、主色 {主色 HEX}、点色 {点色 HEX}。三种颜色承担明确角色，根据主题建立复古、印刷感的色彩关系；禁止灰雾渐变、金属质感、霓虹效果。构图全幅铺开，无摄影式焦点、无大面积空白；可以存在一个大物形居中或偏中，但它不能成为孤立主体；单元必须爬上主体、穿过主体并漫出边缘，使前景、主体、背景处于同一视觉系统；光线平整，轮廓清楚，像平面印刷或展览照明下的实体作品。\n\n文案：中文「{中文文案}」为主，英文「{英文文案}」以更小字号呼应，两者必须同时清晰出现，语义呼应而非逐字直译；根据主题生成的简练、通俗、具有隐喻性的短文案，文字服务于概念，不抢夺图形主体；字体采用简洁现代的平面字体，与波点系统共享视觉语言。质感：丙烯、珐琅厚实平涂或光滑彩漆质感，颜色块干净，圆点边缘锐利，印刷图形清晰；允许轻微实体材料感，但不得破坏扁平图形结构；禁止水彩湿晕、摄影颗粒、真实照片纹理。\n\n避开：任何在世艺术家姓名、稀疏装饰点、可爱贴纸风、卡通贴纸感、写实毛孔、复杂街景、五彩乱点、撕纸拼贴、照片式景深、过度渐变、孤立主体、传统中心构图。不出现年份日期。文案直接展示，没有多余的标点符号。\n\n以下内容作为变量，每次可替换：\n主题：{主题}（可留空，如庄周梦蝶）\n首字或首字母图形：{首字或首字母}（主题中文首字或英文首字母，如「庄」或 Z，可留空自动选）\n主体：{主体}（必填，物形简化、可识别）\n中文文案：{中文文案}（可留空，自动生成一句通俗隐喻短句）\n英文文案：{英文文案}（可留空，与中文语义呼应而非逐字直译）\n机制：{机制}（波点消融｜无限细网｜镜屋延展，三选一，默认波点消融）\n底色：{底色 HEX}（默认中性白 #FAFAF7）\n主色：{主色 HEX}（默认墨黑 #30343A）\n点色：{点色 HEX}（默认信号红 #C83232）",
+  "meta_prompt_usage": "主体必填；主题、首字或首字母图形、中文文案、英文文案可留空自动创作；机制三选一（默认波点消融）；三色槽按 slot_filling 与主题推演。出图后按 checklist 逐项自检，全过才算通过。",
+  "slot_filling": {
+    "主题": "可留空；支持中文/英文/中英混合；决定机体、主体与文案气质",
+    "首字或首字母": "可留空；主题中文首字或英文首字母（如「庄」或 Z），构成背景图形，图形内部由波点/细网单元组成；可辨认为准，禁过度艺术化变形",
+    "主体": "必填；物形高度简化、保留最具识别度轮廓；表面禁光滑素面；禁在世艺术家姓名与写实人像",
+    "中文文案": "可留空；自动生成的一句简练、通俗、有隐喻性的短文案；为主，直接展示，没有多余标点",
+    "英文文案": "可留空；与中文语义呼应而非逐字直译，更小字号",
+    "机制": "三选一：波点消融（默认）｜无限细网｜镜屋延展；一次只选一种；机制痕迹写入画面结构而非表面装饰",
+    "底色": "默认中性白 #FAFAF7（ground，不算墨）；指定彩色底色时按主墨大面积记账（与主色合计 70–85%），全图仍 ≤3 色、≤2 墨",
+    "主色": "默认墨黑 #30343A；主体与大面积的色，写 HEX",
+    "点色": "默认信号红 #C83232；波点/细网/镜面单元的色，写 HEX；与主色相同时按 pure_one_ink 记账",
+    "画幅": "默认 3:4（本环境 GenerateImage）"
+  },
+  "checklist": [
+    "基本单元是点、细网或镜面延展中的一种",
+    "该单元同时覆盖主体与环境",
+    "主体边界被单元部分或持续消解",
+    "全图最多三种颜色，并明确对应 HEX",
+    "没有传统意义上的单一视觉中心",
+    "波点或网是图像结构本身，而非表面装饰"
+  ]
+}

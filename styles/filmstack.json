@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "style_id": "filmstack",
-  "name": "胶片叠层路",
+  "name": "胶片叠层风格",
   "position": "字图同一张膜(加网胶片叠层)",
   "signature": "粗网本身是图形，字与图共享一层；不规则宽边框住拼层。",
   "six_axes": {

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "style_id": "archival",
-  "name": "标本 / 档案路",
+  "name": "标本 / 档案风格",
   "position": "archival plate 版式，标本型",
   "signature": "标题 + 一张规整图像板 + 多栏图注；植物/标本/观察笔记。",
   "six_axes": {

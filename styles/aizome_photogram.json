@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "style_id": "aizome_photogram",
+  "name": "物影蓝晒风格（蓝染变体）",
+  "position": "反俗套蓝染：整张纸蓝晒曝光成靛蓝底，现代潮流物件平放曝光留下白色物影；古典工艺×当代物件，蓝底白形、展柜气质；内置元提示词模板，物件必填",
+  "signature": "整张纸经蓝晒曝光，除物件遮挡处呈白色外全为染斑均匀的靛蓝；一件现代潮流物件（滑板/耳机/球鞋/自行车零件等）直接平放在感光纸上，留下白色物影剪影，轮廓清楚、边缘带轻微水洗晕染与细小颗粒，晕染只发生在蓝区与边缘，白色剪影内部绝对干净；主墨靛蓝大面积 + 钴蓝一处职务，两蓝不相叠；物件可居中偏位或边缘切入，禁居中对称；白色物形与重蓝强反差，展览柜中的实物感，无摄影感、无民俗、无做旧。",
+  "six_axes": {
+    "ground": "ground_pure_white",
+    "ink_role": {
+      "mode": "overprint_duotone",
+      "primary": {"role": "主墨（靛蓝，曝光区底色）", "hex": "#1E3A64", "percent": [70, 85], "duty": "整张蓝晒底、主标题（可按构图白字或钴蓝字）"},
+      "accent": {"role": "辅墨（钴蓝）", "hex": "#2148B8", "percent": [15, 30], "duty": "一件事务：英文小字、一处边染或一条水洗痕"}
+    },
+    "boolean": "knockout",
+    "mechanism": "photogram_stencil",
+    "behavior": "still",
+    "volume": "image_lead"
+  },
+  "typography_bias": "现代几何无衬线；主标题「{主标题}」为物件中文名或一句短语，白色或钴蓝实地；英文小字更小字号呼应（语义呼应非直译）；除这两组外零文字零标点（标点仅逗号句号）；禁编号、日期、年份、印章、签名、水印；文案直接展示，没有多余的标点符号",
+  "subject_bias": "一件现代潮流物件（滑板/耳机/球鞋/自行车零件/冲浪板/合成器）平放曝光成白色物影，占画面 40–60%，轮廓可辨；可居中偏位或从边缘切入、局部裁切；禁民俗纹样、山水、荷花锦鲤、中式窗棂、蓝印花布纹；遮标题 3 秒可辨",
+  "empty_paper": [25, 40],
+  "platform_bias": ["xiaohongshu_34"],
+  "avoid": ["民俗蓝染俗套（江南水乡、油纸伞、荷花锦鲤、山水柳树、蓝印花布纹、中式窗棂、书法印章）", "居中对称模板", "渐变冒充染痕", "灰雾", "做旧泛黄", "铜绿", "摄影感", "第三色相", "独立悬浮线", "编号日期年份", "多余文字标点"],
+  "example_prompt": "Vertical 3:4 aizome-meets-cyanotype art poster, anti-cliche: the whole sheet is exposed to cyanotype light, everything except the object's occlusion is even deep indigo #1E3A64; a modern skateboard lies flat on the sensitized paper leaving a white photogram silhouette (blue background, white object form), contours clearly readable, gentle water-wash edge bleed and fine speckle only in the blue zones and edges, the white silhouette stays absolutely clean. Object off-center or cropped at an edge, never centered symmetrical; strong contrast between heavy indigo field and white form, exhibition-case physical feel, even light, no photographic realism. Cobalt #2148B8 has one duty: the small English echo line or one washed edge. Modern geometric sans title「{主标题}」in white or cobalt, one smaller English echo line under it, semantic echo not literal translation; no other text, no numbers, no dates, no seals, no signatures, no watermark, punctuation limited to comma and period; nothing folk, no water-town, no lotus, no koi, no window-lattice, no blue-floral cloth pattern, no aged paper, no gradients.",
+  "meta_prompt": "一张{主题}的蓝晒物影艺术海报，蓝染工艺的现代版本，反俗套：整张纸经过蓝晒曝光，除物件遮挡处呈白色外，其余全是染斑均匀的靛蓝。物件：{物件}——一件现代潮流物件，直接平放在感光纸上曝光，留下白色剪影（物影摄影），轮廓清楚可辨，边缘有轻微水洗晕染与细小颗粒，晕染只发生在蓝区与边缘，白色剪影内部绝对干净。物形就是主体，不做额外修饰。\n\n颜色两种：靛蓝 #1E3A64（曝光区底色，占画面大部分）与钴蓝 #2148B8（只承担一件事务：英文小字、一处边染或一条水洗痕）。两蓝不相叠，白色即未感光的纸。构图：物件居中偏位或从边缘切入，可作局部裁切，禁止居中对称的俗套构图；大面积重蓝与白色物形构成强反差，光线平整，像展览柜中的实物。\n\n文字：主标题「{主标题}」——现代几何无衬线字体，白色或钴蓝实地；一行英文小字「{英文小字}」以更小字号呼应，两者语义呼应而非逐字直译；文案直接展示，没有多余的标点符号；除这两组外无其他文字、无编号、无日期年份、无印章、无签名、无水印。\n\n质感：蓝晒纸的微纤维感极轻，不做旧；禁渐变冒充染痕、灰雾、铜绿、摄影感。避开任何民俗联想：江南水乡、油纸伞、荷花锦鲤、山水柳树、蓝印花布纹、中式窗棂、书法、印章。克制、安静，有现代画廊的收藏感。\n\n以下内容作为变量，每次可替换：\n主题：{主题}（可留空，如「城市运动之夜」）\n物件：{物件}（必填，现代潮流物件，如滑板、耳机、球鞋、自行车零件、冲浪板、合成器）\n主标题：{主标题}（可留空，物件中文名或一句短语）\n英文小字：{英文小字}（可留空，与主标题语义呼应而非逐字直译）",
+  "meta_prompt_usage": "物件必填；主题、主标题、英文小字可留空自动创作；出图为正像（蓝底白形），与蓝染母版（白底蓝形）互为正负；按 aizome 母版的变奏规则换物、换位、换构图。",
+  "slot_filling": {
+    "主题": "可留空；决定物件语境（如城市运动之夜、街头声音工厂），支持中英混合",
+    "物件": "必填；现代潮流物件，从主题推演或用户指定（滑板、耳机、球鞋、自行车零件、冲浪板、合成器）；禁传统民俗物品（纸伞、瓷器、团扇、印章）",
+    "主标题": "可留空；物件中文名或一句短语（如「滑板」「夜行轨迹」）；现代几何无衬线，白字或钴蓝字",
+    "英文小字": "可留空；与主标题语义呼应而非直译，更小字号；只有这一处可接收钴蓝职务（或作边染/水洗痕）",
+    "构图变奏": "物件居中偏位或从边缘切入、局部裁切；禁止居中对称、禁止民俗构图母题；每次与母版不同的物件位置与裁切，不照搬上一张",
+    "画幅": "默认 3:4（本环境 GenerateImage）"
+  }
+}

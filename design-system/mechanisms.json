@@ -39,12 +39,12 @@
       "id": "photogram_stencil",
       "name": "光影剪影 / 孔版平阶",
       "physics": "连续调压成 2–3 个实地色阶，无点",
-      "wins": ["构成简洁", "波兰海报路径", "远距墙面"],
+      "wins": ["构成简洁", "波兰海报风格", "远距墙面"],
       "loses": ["需要皮肤/织物层次"],
       "rules": {
         "levels": "2–3 平版，桥接岛屿",
         "type": "字实地",
-        "path": "构图简洁时走这一路"
+        "path": "构图简洁时选这一档"
       },
       "prompt_hint": "2-3 flat values, hard photogram silhouette, solid type"
     },
@@ -108,6 +108,21 @@
         "note": "Weingart 语法，勿把人名 / 风格名写进 prompt"
       },
       "prompt_hint": "screened film layers stacked, crossing angles chosen, one tape seam"
+    },
+    {
+      "id": "polka_field",
+      "name": "波普单元场",
+      "physics": "同一种视觉单元（实心圆点 / 细弧网 / 镜面重复）全幅连续生成，无中心、无消失点；单元同时覆盖主体与环境，主体边界被持续消解",
+      "wins": ["波普艺术", "艺术展览海报", "无中心整体", "强图形性封面"],
+      "loses": ["多栏信息阅读", "传统焦点构图", "摄影阶调"],
+      "rules": {
+        "unit": "机制内三选一：波点消融（实心圆点仅 2–3 级大小、同族同形同色、密度极高空隙极少）；无限细网（细小弧线连续连接、远看色雾近看线性单元）；镜屋延展（同单元镜面反射延展的无限回响、图形清晰禁模糊成噪点）",
+        "surface": "主体表面必须被单元完整吞没，禁止大块光滑素面；单元爬上主体、穿过主体并漫出边缘",
+        "color": "全图 ≤3 色（底色 / 主色 / 点色）明确写 HEX；禁灰雾渐变、金属质感、霓虹",
+        "center": "无单一视觉中心；大型物形可居中但不得成为孤立主体",
+        "texture": "丙烯 / 珐琅厚实平涂或光滑彩漆，圆点边缘锐利、印刷图形清晰；禁水彩湿晕、摄影颗粒、真实照片纹理"
+      },
+      "prompt_hint": "one repeating visual unit field covering subject and environment, no center, flat hard-edged dots or fine line nets or mirror echo, ≤3 colors with HEX"
     }
   ],
   "guardrails": [

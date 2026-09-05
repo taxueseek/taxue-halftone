@@ -201,6 +201,40 @@
         "empty_paper_range": [40, 60],
         "tonal_gate": "can name the monumental headline vs tiny subject scale contrast, the large upper emptiness, the duotone overprint deepening on uncoated paper, the fine AM halftone with slight fade and one misregistration; source translated as motif not reproduced; Chinese line carries meaning, English echo smaller, no extra text, no QR/watermark/logo/mockup"
       }
+    },
+    {
+      "id": 13,
+      "style": "polka",
+      "prompt": "用波普波点做一张艺术展览海报，主题是「庄周梦蝶」，主体是蝴蝶。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "polka_field",
+        "ground": "ground_neutral_white",
+        "mode": "complementary_duotone",
+        "ink_hexes": ["#30343A", "#C83232"],
+        "theme_roles": ["primary: simplified subject + large areas", "accent: the repeating dot unit + one short line of copy"],
+        "volume": "image_lead",
+        "behavior": "field",
+        "empty_paper_range": [5, 20],
+        "tonal_gate": "can name the one repeating unit covering subject and environment, the dissolved subject boundary, the ≤3 HEX colors, the absence of a single visual center; unit is structure not decoration; hard-edge flat fill, no gradients, no artist names, no dates"
+      }
+    },
+    {
+      "id": 14,
+      "style": "aizome_photogram",
+      "prompt": "用反俗套蓝染做一张蓝晒物影海报，物件是滑板，主题是城市运动之夜。",
+      "assertions": {
+        "ratio": "3:4",
+        "mechanism": "photogram_stencil",
+        "ground": "ground_pure_white",
+        "mode": "overprint_duotone",
+        "ink_hexes": ["#1E3A64", "#2148B8"],
+        "theme_roles": ["primary: deep indigo exposed field + title", "accent: one duty only — small English echo line or one washed edge"],
+        "volume": "image_lead",
+        "behavior": "still",
+        "empty_paper_range": [25, 40],
+        "tonal_gate": "can name the even indigo field, the white photogram silhouette as unexposed paper, the one cobalt duty, and where the water-wash speckle lives (blue zones and edges only, white silhouette absolutely clean); blue background white object form is the negative of the aizome master (white background blue object form); no folk tropes, no lotus, no water town, no window lattice, no blue-floral cloth pattern, no aged paper, no gradients"
+      }
     }
   ]
 }

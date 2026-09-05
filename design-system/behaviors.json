@@ -39,6 +39,13 @@
       "direction": "主体沿长边逐渐淡出",
       "use": ["竖版", "9:16", "Story", "长边消隐"],
       "prompt_hint": "subject extends and fades along the long edge"
+    },
+    {
+      "id": "field",
+      "name": "无中心场",
+      "direction": "同一种视觉单元全幅均匀连续生成，无焦点、无消失方向，主体、前景与背景共用一个场",
+      "use": ["波普波点", "无中心艺术海报", "单元消融边界"],
+      "prompt_hint": "no center, one repeating unit field covers subject and environment"
     }
   ],
   "guardrails": [
