@@ -1,92 +1,85 @@
 <p align="center">
 
-![Taxue Halftone Poster: a print-feel image engine. Turn a phrase, a theme, or a photo into a print-feel poster or cover.](./assets/readme/hero.png)
+![Taxue Halftone: a print-feel engine. Turn a phrase, a theme, or a photo into a print-feel cover.](./assets/readme/hero.png)
 
 </p>
-
-<div align="center">
-
-[中文](./README.md) · **English**
-
-# taxue-halftone · Halftone Poster
-
-**Turn a phrase, a theme, or a photo into a print-feel poster or cover.**
-
-[![Version](https://img.shields.io/badge/VERSION-1.4.2-2ea44f?style=flat-square&labelColor=333)](./CHANGELOG.md)
-[![Skills](https://img.shields.io/badge/SKILLS-1-2ea44f?style=flat-square&labelColor=333)](./SKILL.md)
-[![Stars](https://img.shields.io/github/stars/taxueseek/taxue-halftone?style=flat-square&label=STARS&color=e37f2c&labelColor=333)](https://github.com/taxueseek/taxue-halftone/stargazers)
-[![Validate](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml/badge.svg)](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml)
-[![SKILL.md](https://img.shields.io/badge/Agent-SKILL.md-214f9b?style=flat-square&labelColor=333)](./SKILL.md)
-
-</div>
 
 <p align="center">
-  <a href="#examples">Examples</a> ·
-  <a href="#eleven-styles--one-variant">Styles</a> ·
-  <a href="#how-to-use">How to use</a> ·
-  <a href="#use-cases">Use cases</a> ·
-  <a href="#basic-rules">Basic rules</a> ·
-  <a href="#validation">Validation</a> ·
-  <a href="#changelog">Changelog</a>
+  <a href="./README.md">中文</a> ·
+  <a href="#specimens">Specimens</a> ·
+  <a href="#twelve-styles--two-variants">Styles</a> ·
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#how-to-use">Get started</a>
 </p>
 
-## The taxue image series
+# Taxue Halftone
 
-Part of the taxue image-generation series — pick the right engine:
+Turn a phrase, a theme, or a photo into a print-feel cover.
+
+## Image-generation family
+
+Same family — pick the right skill:
 
 | Skill | One-liner | Repo |
 |---|---|---|
-| **Taxue Creative Style** (image style engine) | 14 families, 77 variants: render by style, refine prompts, write from scratch, remember preferences | [taxue-creative-style](https://github.com/taxueseek/taxue-creative-style) |
-| **Halftone Poster** (print-feel engine) | 11 styles + 1 variant: a phrase, theme, or photo becomes a print-feel cover | **You are here** · [taxue-halftone](https://github.com/taxueseek/taxue-halftone) |
-| **Solar Polaroid** (seasonal creation engine) | Solar terms, festivals, phenology phrases become memorable posters, paper archives, polaroids | [taxue-solar-polaroid](https://github.com/taxueseek/taxue-solar-polaroid) |
+| **taxue-creative-style** (image-style engine) | 14 families, 77 variants: by-style generation, prompt rewriting, from-scratch, remember preferences | [taxue-creative-style](https://github.com/taxueseek/taxue-creative-style) |
+| **Halftone** (print-feel engine) | 12 styles + 2 variants: a phrase, a theme, or a photo into a print-feel cover | **You are here** · [taxue-halftone](https://github.com/taxueseek/taxue-halftone) |
+| **taxue-solar-polaroid** (solar-term engine) | Solar terms, festivals, phenology lines → posters, paper archives, polaroids | [taxue-solar-polaroid](https://github.com/taxueseek/taxue-solar-polaroid) |
+| **taxue-imagegen** (meta-prompt library) | Four types + four workflows + mechanical slot fill + one-shot verify | WorkBuddy-exclusive · [taxue-imagegen](https://github.com/taxueseek/taxue-imagegen) |
 
-This skill makes "print-feel" images: halftone dots, Riso, woodcut, cyanotype, aizome (indigo dyeing), photocopy aesthetics. It defaults to two colors (one dominant, one accent), or a single color on request. It decides the palette, layout, and typography for you, and outputs a complete reusable prompt.
+It makes print-feel images: halftone dots, Riso, woodcut, cyanotype, photocopy grain. Defaults to two inks (one dominant, one accent), or a single color on request. Palette, type, and layout are decided for you, then you get a complete reusable prompt.
 
-## Examples
+## Specimens
+
+Ten styles have samples. Click a title for the original.
+
+![Nine print-feel specimens: editorial, archival, Swiss, filmstack, Polish, aizome, imperfect collage, dot dissolve, Chinese paper-cut](./assets/readme/styles-grid.jpg)
+
+<p align="center">
+<a href="./examples/example-midnight-store.jpg">Midnight store</a> ·
+<a href="./examples/example-herbarium.png">Herbarium</a> ·
+<a href="./examples/example-concert-hall.jpg">Silent Order</a> ·
+<a href="./examples/example-midnight-radio.png">Midnight Radio</a> ·
+<a href="./examples/example-echo.png">Echo</a> ·
+<a href="./examples/example-aizome-near-far.jpg">Near and Far</a> ·
+<a href="./examples/example-rain-umbrella.png">Rain umbrella</a> ·
+<a href="./examples/example-dot-dissolve-lighthouse.jpg">Lighthouse in fog</a> ·
+<a href="./examples/example-paper-cut-group-sea-sky.jpg">Sea and sky</a>
+</p>
+
+The same print languages, other pictures.
+
+![More specimens: Riso zine, dot dissolve, imperfect collage, editorial, aizome](./assets/readme/more-grid.jpg)
+
+<p align="center">
+<a href="./examples/example-seashell.png">Sea Breeze</a> ·
+<a href="./examples/example-dot-dissolve-jellyfish.jpg">Lantern of the deep</a> ·
+<a href="./examples/example-dot-dissolve-fenghuaxueyue.jpg">Feng Hua Xue Yue</a> ·
+<a href="./examples/example-night-walk.png">Night walk</a> ·
+<a href="./examples/example-night-ride.png">Night ride</a> ·
+<a href="./examples/example-break-limits.jpg">Break Limits</a> ·
+<a href="./examples/example-still-open.jpg">Still Open</a> ·
+<a href="./examples/example-solitude.jpg">SOLITUDE</a> ·
+<a href="./examples/example-aizome-blue-knight.jpg">Blue Knight</a> ·
+<a href="./examples/example-last-kilometer.jpg">The Last Kilometer</a> ·
+<a href="./examples/README.md">All originals</a>
+</p>
 
 > Images live in the `examples/` directory and are generated by this skill (see [ASSET-LICENSE.md](./ASSET-LICENSE.md)). Ten of the twelve styles and both variants have samples — imperfect collage and dot dissolve three each, editorial five (including two bilingual variants), aizome two, one for the rest; tribute, polka and both variants (dot paper-cut, aizome photogram) have none yet.
-
-| Midnight store (Vintage editorial) | Herbarium (Archival) | Silent Order (Swiss) |
-|:---:|:---:|:---:|
-| <img src="./examples/example-midnight-store.jpg" alt="Blue and orange midnight convenience store halftone poster" width="280"> | <img src="./examples/example-herbarium.png" alt="Green herbarium specimen print poster" width="280"> | <img src="./examples/example-concert-hall.jpg" alt="Red architectural photography exhibition poster" width="280"> |
-
-| Midnight Radio (Filmstack) | Echo (Polish) | Sea Breeze (Riso zine) |
-|:---:|:---:|:---:|
-| <img src="./examples/example-midnight-radio.png" alt="Blue film-stack midnight radio poster" width="280"> | <img src="./examples/example-echo.png" alt="Black high-contrast echo poster" width="280"> | <img src="./examples/example-seashell.png" alt="Green and violet seashell zine cover" width="280"> |
-
-| Rain umbrella (Imperfect collage) | Night walk (Imperfect collage) | Night ride (Imperfect collage) |
-|:---:|:---:|:---:|
-| <img src="./examples/example-rain-umbrella.png" alt="Blue and black torn-paper collage rain umbrella poster" width="280"> | <img src="./examples/example-night-walk.png" alt="Blue torn-paper collage city night walk poster" width="280"> | <img src="./examples/example-night-ride.png" alt="Blue torn-paper collage night ride poster" width="280"> |
-
-| Lighthouse in fog (Dot dissolve) | Lantern of the deep (Dot dissolve) | Feng Hua Xue Yue (Dot dissolve) |
-|:---:|:---:|:---:|
-| <img src="./examples/example-dot-dissolve-lighthouse.jpg" alt="Blue and orange dot-matrix lighthouse-in-fog poster" width="280"> | <img src="./examples/example-dot-dissolve-jellyfish.jpg" alt="Blue and orange-red dot-matrix jellyfish poster" width="280"> | <img src="./examples/example-dot-dissolve-fenghuaxueyue.jpg" alt="Blue-black mountains with vermilion moon dot-matrix poster" width="280"> |
-
-| Sea and sky (Chinese paper-cut) | Break Limits (Vintage editorial) | The Last Kilometer (editorial, bilingual variant) |
-|:---:|:---:|:---:|
-| <img src="./examples/example-paper-cut-group-sea-sky.jpg" alt="Charcoal paper-cut sea, sky and fish with one pink jump-color member, Chinese paper-cut poster" width="280"> | <img src="./examples/example-break-limits.jpg" alt="Blue and red two-ink halftone Break Limits poster" width="280"> | <img src="./examples/example-last-kilometer.jpg" alt="Blue and orange halftone The Last Kilometer bilingual poster" width="280"> |
-
-| Still Open (editorial, bilingual variant) | Solitude (Vintage editorial) | Near and Far (Aizome) |
-|:---:|:---:|:---:|
-| <img src="./examples/example-still-open.jpg" alt="Deep blue and orange halftone Still Open convenience store bilingual poster" width="280"> | <img src="./examples/example-solitude.jpg" alt="Deep blue halftone Solitude poster" width="280"> | <img src="./examples/example-aizome-near-far.jpg" alt="Indigo aizome Near and Far poster" width="280"> |
-
-| Blue Knight (Aizome) |  |  |
-|:---:|:---:|:---:|
-| <img src="./examples/example-aizome-blue-knight.jpg" alt="Indigo aizome Blue Knight speed poster" width="280"> |  |  |
 
 ## Twelve styles + two variants
 
 | Style | Swatch | What it looks like |
 |---|---|---|
-| **Editorial** | ![editorial](./swatches/editorial.svg) | Blue + terracotta, halftone dots, one dominant object with type crossing over it. The default. Built-in concise meta prompt (topic is the only required input) |
-| **Polish** | ![polish](./swatches/polish.svg) | Single-color high contrast, the type is the image, clean and sharp |
-| **Swiss** | ![swiss](./swatches/swiss.svg) | Red + black, clear photo tones, solid type, generous white space, restrained |
-| **Riso zine** | ![riso_zine](./swatches/riso_zine.svg) | Green + violet, small subject, lots of paper, like a hand-printed zine |
-| **Filmstack** | ![filmstack](./swatches/filmstack.svg) | Blue + orange, coarse dots as the graphic itself, layered sheets in a wide frame |
-| **Archival** | ![archival](./swatches/archival.svg) | Green + black, title + one tidy plate + multi-column notes, like a specimen field note |
-| **Imperfect collage** | ![imperfect_collage](./swatches/imperfect_collage.svg) | Warm-white paper + large spot-color field + B/W halftone subject, torn edges as reveal, image above / info card below, intentionally imperfect |
-| **Dot dissolve** | ![dot_dissolve](./swatches/dot_dissolve.svg) | Aubergine + signal red, retro silkscreen round-dot matrix, the subject deconstructs into dots, grain and flowing ripples, bold type fused with the dot field, built-in meta prompt (topic is the only required input) |
-| **Chinese paper-cut** | ![paper_cut_group](./swatches/paper_cut_group.svg) | Charcoal + vermilion, layered knife-cut silhouettes with white negative-space cutout details, one jump-color exception member, image above / info card below, built-in meta prompt (topic is the only required input) |
+| **Editorial** (editorial) | ![editorial](./swatches/editorial.svg) | Blue + terracotta, halftone dots, one dominant object with type crossing over it. The default. Built-in concise meta prompt (topic is the only required input) |
+| **Polish** (polish) | ![polish](./swatches/polish.svg) | Single-color high contrast, the type is the image, clean and sharp |
+| **Swiss** (swiss) | ![swiss](./swatches/swiss.svg) | Red + black, clear photo tones, solid type, generous white space, restrained |
+| **Riso zine** (riso_zine) | ![riso_zine](./swatches/riso_zine.svg) | Green + violet, small subject, lots of paper, like a hand-printed zine |
+| **Filmstack** (filmstack) | ![filmstack](./swatches/filmstack.svg) | Blue + orange, coarse dots as the graphic itself, layered sheets in a wide frame |
+| **Archival** (archival) | ![archival](./swatches/archival.svg) | Green + black, title + one tidy plate + multi-column notes, like a specimen field note |
+| **Imperfect collage** (imperfect_collage) | ![imperfect_collage](./swatches/imperfect_collage.svg) | Warm-white paper + large spot-color field + B/W halftone subject, torn edges as reveal, image above / info card below, intentionally imperfect |
+| **Dot dissolve** (dot_dissolve) | ![dot_dissolve](./swatches/dot_dissolve.svg) | Aubergine + signal red, retro silkscreen round-dot matrix, the subject deconstructs into dots, grain and flowing ripples, bold type fused with the dot field, built-in meta prompt (topic is the only required input) |
+| **Chinese paper-cut** (paper_cut_group) | ![paper_cut_group](./swatches/paper_cut_group.svg) | Charcoal + vermilion, layered knife-cut silhouettes with white negative-space cutout details, one jump-color exception member, image above / info card below, built-in meta prompt (topic is the only required input) |
 | **Dot paper-cut** (paper_cut_halftone, variant) | ![paper_cut_halftone](./swatches/paper_cut_halftone.svg) | Main ink + paper + one muted jump color, a hybrid of dot dissolve and Chinese paper-cut — window-flower contours filled with coarse round halftone dots, open shadows, three palette options, image above / info card below, built-in meta prompt (topic is the only required input) |
 | **Aizome** (aizome) | ![aizome](./swatches/aizome.svg) | Absolutely pure white digital plane + deep indigo + cobalt, cyanotype-style flat-value silhouette, dye tonal depth and woodblock hatching live only inside the blue shapes, headline + subline vary across a nine-direction grid, built-in meta prompt (topic is the only required input) |
 | **Aizome photogram** (aizome_photogram, variant) | ![aizome_photogram](./swatches/aizome_photogram.svg) | Anti-cliché aizome: indigo field with white photogram silhouettes of modern objects (skateboard / headphones / sneakers) exposed flat on the sheet, water-wash bleed only in blue zones, exhibition-case temperament, built-in meta prompt (object required) |
@@ -95,9 +88,15 @@ This skill makes "print-feel" images: halftone dots, Riso, woodcut, cyanotype, a
 
 Name the style you want; if you don't, it picks one from your subject and intent.
 
-## How to use
+## How it works
 
-Install:
+<p align="center">
+  <img src="./assets/readme/workflow.svg" width="100%" alt="From a phrase to a print-feel cover: hear the intent, pick a style, lock ink and layout, generate and check">
+</p>
+
+Input is your intent. Output is a prompt the model can run. Whether the picture works depends on four things: whether it heard you, whether the style is right, whether ink and type/image volume are locked, and whether the result was checked against the six axes.
+
+## How to use
 
 ```bash
 npx skills add taxueseek/taxue-halftone
@@ -122,7 +121,7 @@ You can also type `/taxue-halftone` to trigger it. Each run returns three things
 
 ## Basic rules
 
-- **At most two colors**: one dominant color carries the subject and headline; one accent color has exactly one job (date, annotation, marking one object). Never sprinkle the accent color around as decoration.
+- **Disciplined palettes**: the default is two inks — a dominant color carries the subject and headline; one accent color has exactly one job (date, annotation, marking one object), never sprinkled around as decoration. Color-rich styles (tribute, polka) follow their own family rules: every color has a duty, hierarchy is explicit, even splitting is banned.
 - **Paper is part of the image**: the ground is not a color. Light paper with dark ink, dark paper with light type, both work.
 - **Type and image take turns**: when type is loud, the image steps back, and vice versa. Never both at full volume.
 - **Print feel comes from dots, not aging**: halftone and Riso do not mean yellowed, sepia, or nostalgic by default.
@@ -148,15 +147,14 @@ scripts/render_style_card.py <style_id> # regenerate the swatch card
 
 ## Changelog
 
-- **v1.4.2** (2026-09-05): All style display names unified to natural language ("XX style", style IDs unchanged); the "quick path" wording became "concise flow"; all swatch cards regenerated; polka (new mechanism polka_field + new behavior field) and aizome photogram (aizome variant) enter the release line for the first time (developed at 1.4.0 but never shipped with 1.2.0–1.4.1); the source-of-truth tree and the release repo are aligned; evaluations up to 14. See [CHANGELOG.md](./CHANGELOG.md).
-
-- **v1.4.1** (2026-09-04): Sample gallery expanded — six new real samples: Break Limits, The Last Kilometer (editorial, bilingual variant), Still Open (editorial, bilingual variant), Solitude (editorial), Near and Far and Blue Knight (aizome); the aizome style now has samples; all samples stripped of generation metadata (EXIF tracking fields and AI labels), pixels untouched.
-- **v1.4.0** (2026-09-04): Punctuation hard rules applied to all built-in meta prompts; editorial concise meta prompt (classic halftone, topic as the only required input) plus bilingual variant (still open / 营业中); new style 10 `aizome` (indigo dye poster) and style 11 `tribute` (classic tribute); design system gains `ground_pure_white`; evaluations up to 11 cases. See [CHANGELOG.md](./CHANGELOG.md).
-- **v1.3.0** (2026-09-03): Reference-creation mode (§1.6) — when the user provides a reference image, first classify its role: same fingerprint locks the matching style's six axes as the starting point; mechanism migration takes 2–4 visible mechanisms plus a hollowing-out test. See [CHANGELOG.md](./CHANGELOG.md).
-- **v1.2.0** (2026-09-03): Image-source diagnosis (§1.5) — five-line diagnostic card from the photo, then axis values from a feature mapping table; four-domain propositions; Chinese display glyph quick reference (§4.5, 6 families); ablation tooling `ablate.py` / `checker.py`. See [CHANGELOG.md](./CHANGELOG.md).
-- **v1.1.0** (2026-09-03): New styles 7–9 — `imperfect_collage`, `dot_dissolve`, `paper_cut_group` (Chinese paper-cut) — plus a seventh print mechanism `paper_cut_collage`, each with a built-in meta prompt; also the variant `paper_cut_halftone` (Dot paper-cut — a hybrid of dot dissolve and Chinese paper-cut); four real samples (Lighthouse in Fog, Lantern of the Deep, Feng Hua Xue Yue, Sea and Sky — the last one for Chinese paper-cut); new "Randomness and creativity" section with model recommendations; renamed styles — Paper-cut group → Chinese paper-cut, Paper-cut halftone → Dot paper-cut (now defined as a variant), style IDs unchanged. See [CHANGELOG.md](./CHANGELOG.md).
-- **v1.0.0** (2026-09-01): Initial release. Six styles, machine validation, and evaluation cases. See [CHANGELOG.md](./CHANGELOG.md).
+- **v1.4.2** (2026-09-05): Style names unified; polka and aizome photogram enter the release line. See [CHANGELOG.md](./CHANGELOG.md).
+- **v1.4.1** (2026-09-04): Six new real samples; generation metadata stripped.
+- **v1.4.0** (2026-09-04): Punctuation hard rules; new styles `aizome` and `tribute`. See [CHANGELOG.md](./CHANGELOG.md).
+- **v1.3.0** (2026-09-03): Reference-creation mode. See [CHANGELOG.md](./CHANGELOG.md).
+- **v1.2.0** (2026-09-03): Image-source diagnosis, four-domain propositions, Chinese display glyph quick reference. See [CHANGELOG.md](./CHANGELOG.md).
+- **v1.1.0** (2026-09-03): New styles imperfect collage, dot dissolve, Chinese paper-cut, and the dot paper-cut variant. See [CHANGELOG.md](./CHANGELOG.md).
+- **v1.0.0** (2026-09-01): Initial release. See [CHANGELOG.md](./CHANGELOG.md).
 
 ## License
 
-Code and skill content are MIT-licensed ([LICENSE](./LICENSE)); images in `examples/` follow [ASSET-LICENSE.md](./ASSET-LICENSE.md) and are not covered by MIT.
+Code and skill content are MIT-licensed ([LICENSE](./LICENSE)); images in `examples/` and `assets/readme/` follow [ASSET-LICENSE.md](./ASSET-LICENSE.md) and are not covered by MIT.

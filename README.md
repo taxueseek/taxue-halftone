@@ -4,31 +4,17 @@
 
 </p>
 
-<div align="center">
-
-**中文** · [English](./README.en.md)
-
-# taxue-halftone · 半调海报
-
-**把一句话、一个主题或一张照片，做成一张有印刷质感的封面。**
-
-[![Version](https://img.shields.io/badge/VERSION-1.4.2-2ea44f?style=flat-square&labelColor=333)](./CHANGELOG.md)
-[![Skills](https://img.shields.io/badge/SKILLS-1-2ea44f?style=flat-square&labelColor=333)](./SKILL.md)
-[![Stars](https://img.shields.io/github/stars/taxueseek/taxue-halftone?style=flat-square&label=STARS&color=e37f2c&labelColor=333)](https://github.com/taxueseek/taxue-halftone/stargazers)
-[![Validate](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml/badge.svg)](https://github.com/taxueseek/taxue-halftone/actions/workflows/validate.yml)
-[![SKILL.md](https://img.shields.io/badge/Agent-SKILL.md-214f9b?style=flat-square&labelColor=333)](./SKILL.md)
-
-</div>
-
 <p align="center">
-  <a href="#示例作品">示例作品</a> ·
-  <a href="#十一种风格">风格</a> ·
-  <a href="#怎么用">怎么用</a> ·
-  <a href="#适合做什么">适合做什么</a> ·
-  <a href="#基本规矩">基本规矩</a> ·
-  <a href="#工程校验">工程校验</a> ·
-  <a href="#更新记录">更新记录</a>
+  <a href="./README.en.md">English</a> ·
+  <a href="#成图标本">成图</a> ·
+  <a href="#十二种风格--两个变体">风格</a> ·
+  <a href="#怎么工作">怎么工作</a> ·
+  <a href="#开始使用">开始使用</a>
 </p>
+
+# 踏雪半调海报
+
+把一句话、一个主题或一张照片，做成一张有印刷质感的封面。
 
 ## 生图技能家族
 
@@ -37,42 +23,49 @@
 | 技能 | 一句话 | 仓库 |
 |---|---|---|
 | **踏雪创意风格**（影像风格引擎） | 14 个家族、77 个变体：按风格出图、改提示词、从零写、记住偏好 | [taxue-creative-style](https://github.com/taxueseek/taxue-creative-style) |
-| **半调海报**（印刷质感引擎） | 11 种风格 + 1 个变体：一句话、一个主题或一张照片，做成印刷感封面 | **你在这里** · [taxue-halftone](https://github.com/taxueseek/taxue-halftone) |
+| **半调海报**（印刷质感引擎） | 12 种风格 + 2 个变体：一句话、一个主题或一张照片，做成印刷感封面 | **你在这里** · [taxue-halftone](https://github.com/taxueseek/taxue-halftone) |
 | **节气拍立得**（节气创作引擎） | 节气、节日、物候短句，推出有记忆点的海报、纸本档案与拍立得 | [taxue-solar-polaroid](https://github.com/taxueseek/taxue-solar-polaroid) |
+| **踏雪生图**（元提示词库） | 四种类型 + 四种工作流 + 机械填槽 + 一次验收 | WorkBuddy 专属 · [taxue-imagegen](https://github.com/taxueseek/taxue-imagegen) |
 
-它做的是「印刷感」的图：半调网点、Riso 孔版、木刻、蓝晒、复印机那种质感。默认双色（一主一辅），也可以只用单色，具体怎么配色、字放哪，它都会配好，最后给出一份完整可复用的提示词。
+它做的是「印刷感」的图：半调网点、Riso 孔版、木刻、蓝晒、复印机那种质感。默认双色（一主一辅），也可以只用单色。配色、字放哪，它会配好，最后给你一份完整可复用的提示词。
 
-## 示例作品
+## 成图标本
+
+十种风格各有样张。点题名看原图。
+
+![九种印刷风格成图：复古编辑、标本档案、瑞士海报、胶片叠层、波兰海报、蓝染、不完美印刷拼贴、点阵解构、中式剪纸](./assets/readme/styles-grid.jpg)
+
+<p align="center">
+<a href="./examples/example-midnight-store.jpg">深夜便利店</a> ·
+<a href="./examples/example-herbarium.png">标本档案</a> ·
+<a href="./examples/example-concert-hall.jpg">无声的秩序</a> ·
+<a href="./examples/example-midnight-radio.png">午夜电台</a> ·
+<a href="./examples/example-echo.png">回声</a> ·
+<a href="./examples/example-aizome-near-far.jpg">咫尺天涯</a> ·
+<a href="./examples/example-rain-umbrella.png">雨天雨伞</a> ·
+<a href="./examples/example-dot-dissolve-lighthouse.jpg">雾中灯塔</a> ·
+<a href="./examples/example-paper-cut-group-sea-sky.jpg">海阔天空</a>
+</p>
+
+同一套印刷语言，还可以长成这些样子。
+
+![更多成图：孔版小册、点阵解构、不完美印刷拼贴、复古编辑、蓝染](./assets/readme/more-grid.jpg)
+
+<p align="center">
+<a href="./examples/example-seashell.png">海风集</a> ·
+<a href="./examples/example-dot-dissolve-jellyfish.jpg">深海之灯</a> ·
+<a href="./examples/example-dot-dissolve-fenghuaxueyue.jpg">风花雪月</a> ·
+<a href="./examples/example-night-walk.png">城市夜归</a> ·
+<a href="./examples/example-night-ride.png">夜骑</a> ·
+<a href="./examples/example-break-limits.jpg">突破极限</a> ·
+<a href="./examples/example-still-open.jpg">营业中</a> ·
+<a href="./examples/example-solitude.jpg">SOLITUDE</a> ·
+<a href="./examples/example-aizome-blue-knight.jpg">蓝色骑士</a> ·
+<a href="./examples/example-last-kilometer.jpg">最后一公里</a> ·
+<a href="./examples/README.md">全部原图</a>
+</p>
 
 > 图片放在 `examples/` 目录，由技能实际出图产出（版权见 [ASSET-LICENSE.md](./ASSET-LICENSE.md)）。十二种风格与两个变体中十个有示例图：不完美印刷拼贴与点阵解构各有三张，复古编辑五张（含双语变体两张），蓝染两张，其余风格各一张；经典致敬、波普波点与两种变体（点阵剪纸、物影蓝晒）暂无样张。
-
-| 深夜便利店（复古编辑） | 标本档案（标本档案） | 无声的秩序（瑞士海报） |
-|:---:|:---:|:---:|
-| <img src="./examples/example-midnight-store.jpg" alt="蓝橙双色深夜便利店半调海报" width="280"> | <img src="./examples/example-herbarium.png" alt="绿色标本档案印刷海报" width="280"> | <img src="./examples/example-concert-hall.jpg" alt="红色摄影展海报无声的秩序" width="280"> |
-
-| 午夜电台（胶片叠层） | 回声（波兰海报） | 海风集（孔版小册） |
-|:---:|:---:|:---:|
-| <img src="./examples/example-midnight-radio.png" alt="蓝色胶片叠层午夜电台海报" width="280"> | <img src="./examples/example-echo.png" alt="黑色高反差回声海报" width="280"> | <img src="./examples/example-seashell.png" alt="绿色紫色海风集封面" width="280"> |
-
-| 雨天雨伞（不完美印刷拼贴） | 城市夜归（不完美印刷拼贴） | 夜骑（不完美印刷拼贴） |
-|:---:|:---:|:---:|
-| <img src="./examples/example-rain-umbrella.png" alt="蓝黑撕纸拼贴雨天雨伞海报" width="280"> | <img src="./examples/example-night-walk.png" alt="蓝色撕纸拼贴城市夜归海报" width="280"> | <img src="./examples/example-night-ride.png" alt="蓝色撕纸拼贴夜骑海报" width="280"> |
-
-| 雾中灯塔（点阵解构） | 深海之灯（点阵解构） | 风花雪月（点阵解构） |
-|:---:|:---:|:---:|
-| <img src="./examples/example-dot-dissolve-lighthouse.jpg" alt="蓝色与橙色点阵解构雾中灯塔海报" width="280"> | <img src="./examples/example-dot-dissolve-jellyfish.jpg" alt="蓝色与橙红点阵解构深海之灯水母海报" width="280"> | <img src="./examples/example-dot-dissolve-fenghuaxueyue.jpg" alt="蓝黑山水与朱红月位点阵解构风花雪月海报" width="280"> |
-
-| 海阔天空（中式剪纸） | 突破极限（复古编辑） | 最后一公里（复古编辑·双语变体） |
-|:---:|:---:|:---:|
-| <img src="./examples/example-paper-cut-group-sea-sky.jpg" alt="蓝黑剪纸山海鱼群与粉色跳色中式剪纸海报" width="280"> | <img src="./examples/example-break-limits.jpg" alt="蓝红双色半调突破极限海报" width="280"> | <img src="./examples/example-last-kilometer.jpg" alt="蓝橙双色半调最后一公里双语海报" width="280"> |
-
-| 营业中（复古编辑·双语变体） | SOLITUDE（复古编辑） | 咫尺天涯（蓝染） |
-|:---:|:---:|:---:|
-| <img src="./examples/example-still-open.jpg" alt="深蓝橙半调营业中便利店双语海报" width="280"> | <img src="./examples/example-solitude.jpg" alt="深蓝半调SOLITUDE空旷海报" width="280"> | <img src="./examples/example-aizome-near-far.jpg" alt="靛蓝蓝染咫尺天涯海报" width="280"> |
-
-| 蓝色骑士（蓝染） |  |  |
-|:---:|:---:|:---:|
-| <img src="./examples/example-aizome-blue-knight.jpg" alt="靛蓝蓝染蓝色骑士极速抵达海报" width="280"> |  |  |
 
 ## 十二种风格 + 两个变体
 
@@ -95,9 +88,15 @@
 
 想用哪个风格，直接点名；不说风格它会按主题和用途选。
 
-## 怎么用
+## 怎么工作
 
-安装：
+<p align="center">
+  <img src="./assets/readme/workflow.svg" width="100%" alt="从一句话到印刷感封面：听清意图、选定风格、配色版式、出图自检">
+</p>
+
+输入是你的意图，输出是能直接出图的提示词。图好不好，取决于四件事：有没有听清你要什么、风格选得对不对、墨色和字图音量有没有锁死、出图后有没有对照六轴检查。
+
+## 开始使用
 
 ```bash
 npx skills add taxueseek/taxue-halftone
@@ -122,7 +121,7 @@ npx skills add taxueseek/taxue-halftone
 
 ## 基本规矩
 
-- **最多双色**：一个主色管主体和标题，一个辅色只做一件事（日期、注释、勾一个物件），不洒满页当装饰
+- **配色讲纪律**：默认限墨双色——主色管主体和标题，辅色只做一件事（日期、注释、勾一个物件），不洒满页当装饰；色彩丰富的风格（经典致敬、波普波点）按各自族规执行：每色有职务、主次分明、禁止平均分配
 - **纸是画面的一部分**：底色不算颜色，浅色纸配深色、深纸配浅字都算好
 - **字和图分主次**：字大声图就退，图大声字就退，不两个都抢
 - **印刷感靠网点不靠做旧**：用半调、Riso 不等于要泛黄、怀旧
@@ -148,15 +147,14 @@ scripts/render_style_card.py <style_id> # 重新生成色卡图
 
 ## 更新记录
 
-- **v1.4.2**（2026-09-05）：全部风格名统一为自然语言「XX风格」（style_id 不变），「快速路」表述改为「精简流程」，色卡全部重渲；波普波点（polka，新机制 polka_field + 新行为 field）与物影蓝晒（aizome_photogram，蓝染变体）首次进入发布线（1.4.0 时已开发、未随 1.2.0–1.4.1 发布）；真源与发布仓内容对齐，评测用例补到第 14 条。详见 [CHANGELOG.md](./CHANGELOG.md)。
-
-- **v1.4.1**（2026-09-04）：示例图集扩充——新增六张实测样张：突破极限、最后一公里（复古编辑·双语变体）、营业中（复古编辑·双语变体）、SOLITUDE（复古编辑）、咫尺天涯与蓝色骑士（蓝染），蓝染风格补齐样张；全部样张剥离生成元数据（EXIF 追踪字段与 AI 标识），只保留像素。
-- **v1.4.0**（2026-09-04）：文案标点硬约束全面落地；editorial 内置精炼元提示词模板（经典半调，只输入主题即可出图）+ 中英双文案变体（still open / 营业中）；新增第十套风格 aizome（蓝染艺术海报风格）与第十一套风格 tribute（经典致敬风格），设计系统新增 ground_pure_white（数字纯白）；评测用例补到第 11 条。详见 [CHANGELOG.md](./CHANGELOG.md)。
-- **v1.3.0**（2026-09-03）：参考创作模式（§1.6），用户提供参考图时先判角色——同指纹则锁定对应风格六轴为起点，机制迁移走 2–4 个可见机制 + 掏空判定。详见 [CHANGELOG.md](./CHANGELOG.md)。
-- **v1.2.0**（2026-09-03）：图源输入诊断（§1.5）——照片先写五行诊断卡再按特征映射表取六轴值；四域命题落账设计判断；中文展示字形速查（§4.5）6 谱系；消融工具 ablate.py / checker.py。详见 [CHANGELOG.md](./CHANGELOG.md)。
-- **v1.1.0**（2026-09-03）：新增第七至第九套风格 imperfect_collage（不完美印刷拼贴）、dot_dissolve（点阵解构海报风格）、paper_cut_group（中式剪纸风格）与第七种印刷机制 paper_cut_collage（剪纸拼贴），均内置元提示词模板；另新增变体 paper_cut_halftone（点阵剪纸风格——点阵解构与中式剪纸的混搭）；补四张实测样张（雾中灯塔、深海之灯、风花雪月、海阔天空，其中海阔天空为中式剪纸样张）；新增「随机性与创造力」说明与生图模型建议；风格更名——中式剪纸群像→中式剪纸、网点剪纸群像→点阵剪纸（定性为变体），style_id 不变。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.4.2**（2026-09-05）：风格名统一为「XX风格」；波普波点与物影蓝晒进入发布线。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.4.1**（2026-09-04）：示例图集扩充六张实测样张，并剥离生成元数据。
+- **v1.4.0**（2026-09-04）：文案标点硬约束落地；新增蓝染与经典致敬。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.3.0**（2026-09-03）：参考创作模式。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.2.0**（2026-09-03）：图源输入诊断、四域命题、中文展示字形速查。详见 [CHANGELOG.md](./CHANGELOG.md)。
+- **v1.1.0**（2026-09-03）：新增不完美印刷拼贴、点阵解构、中式剪纸与点阵剪纸变体。详见 [CHANGELOG.md](./CHANGELOG.md)。
 - **v1.0.0**（2026-09-01）：首次发布。六种风格、六种印刷质感、机器校验和评测用例。详见 [CHANGELOG.md](./CHANGELOG.md)。
 
 ## License
 
-代码和技能内容走 [MIT License](./LICENSE)；`examples/` 里的示例图走 [ASSET-LICENSE.md](./ASSET-LICENSE.md)，不随 MIT 分发。
+代码和技能内容走 [MIT License](./LICENSE)；`examples/` 里的示例图与 `assets/readme/` 头图、成图墙走 [ASSET-LICENSE.md](./ASSET-LICENSE.md)，不随 MIT 分发。

@@ -1,24 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
   <title id="title">踏雪半调海报</title>
-  <desc id="desc">印刷质感引擎：把一句话、一个主题或一张照片，做成一张有印刷质感的封面。成图用示例原图展示。</desc>
-
+  <desc id="desc">印刷质感引擎。把一句话、一个主题或一张照片，做成一张有印刷质感的封面。</desc>
   <rect width="1200" height="280" rx="18" fill="#F4EEE4"/>
   <rect x="0" y="32" width="4" height="216" fill="#C3272B"/>
-
   <g transform="translate(56 36)">
     <text x="0" y="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#8B8174" letter-spacing="6">印刷质感引擎</text>
     <text x="0" y="68" font-family="Songti SC, STSong, Songti TC, Georgia, serif" font-size="44" fill="#2C2C2C">半调海报</text>
     <text x="0" y="104" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="17" fill="#3A3530">把一句话、一个主题或一张照片，做成一张有印刷质感的封面</text>
-
     <g transform="translate(0 132)">
-      <rect width="108" height="28" rx="4" fill="#FAF6EE" stroke="#D4CBB8"/>
-      <text x="54" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#2C2C2C">11 风格</text>
-      <rect x="120" width="108" height="28" rx="4" fill="#FAF6EE" stroke="#D4CBB8"/>
-      <text x="174" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#2C2C2C">双色印刷</text>
-      <rect x="240" width="108" height="28" rx="4" fill="#FAF6EE" stroke="#D4CBB8"/>
-      <text x="294" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#C3272B">内置模板</text>
+      <rect width="92" height="28" rx="4" fill="#FAF6EE" stroke="#D4CBB8"/>
+      <text x="46" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#2C2C2C">12 风格</text>
+      <rect x="104" width="108" height="28" rx="4" fill="#FAF6EE" stroke="#D4CBB8"/>
+      <text x="158" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#2C2C2C">双色印刷</text>
+      <rect x="224" width="108" height="28" rx="4" fill="#FAF6EE" stroke="#D4CBB8"/>
+      <text x="278" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#C3272B">内置模板</text>
     </g>
-
     <g transform="translate(0 190)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <text x="0" y="0" fill="#2C2C2C">主题</text>
       <text x="42" y="0" fill="#C4B8A8">→</text>
@@ -29,7 +25,4 @@
       <text x="228" y="0" fill="#C3272B">成图</text>
     </g>
   </g>
-
-  <rect x="1108" y="196" width="32" height="32" rx="2" fill="#C3272B"/>
-  <text x="1124" y="218" text-anchor="middle" font-family="Kaiti SC, STKaiti, Songti SC, serif" font-size="15" fill="#F4EEE4">雪</text>
 </svg>
